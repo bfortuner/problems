@@ -2,7 +2,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.lang.Math;
 
-public class BitwiseOperators {
+public class PowersetBitwiseOperators {
 
     public static void main(String[] args) {
 	testNextMCalc();
@@ -40,30 +40,15 @@ public class BitwiseOperators {
         String[] array13 = {"01110110","01111001"};
         clumpVals.add(array13);
 
-
 	for (String[] clump : clumpVals) {
             String in = clump[0];
             String out = clump[1];
-	    //System.out.print(in + " -> ");
-	    //String answer = getNextSetM(in); 
-            //System.out.println("\n" + answer + " == " + answer.equals(out) + "\n========");
-	    System.out.println(in + "\n" + smallTest(in));
+	    System.out.print(in + " -> ");
+	    String answer = getNextSetM(in); 
+            System.out.println("\n" + answer + " == " + answer.equals(out) + "\n========");
 	}
     }
 
-    public static String smallTest(String binStr) {
-	int num = binaryStrToInt(binStr);
-	//00110100
-        //00110011
-	//00110000
-	
-	//num = num & (num-1);
-
-	num = ~(num>>1);
-
-
-	return intToNBitBinaryStr(num, 8);
-    }
 
     public static String getNextSetM(String bitsStr) {
 	int num = binaryStrToInt(bitsStr);
@@ -73,7 +58,6 @@ public class BitwiseOperators {
 	// 01101101 unset lowest bit
 	// 00000010 get XOR with num to get unset bit
 	int lowBit = ( num & (num-1) ) ^ num;
-	System.out.print("\n" + intToNBitBinaryStr(lowBit,8) + "\n");
 	
 	// Get highest bit of lowest clump
 	// 01101110
@@ -81,16 +65,12 @@ public class BitwiseOperators {
 	int highBit = ~(num>>1) & num;
 	// 00001000  // get lowest remaining bit
 	highBit = ( highBit & (highBit-1) ) ^ highBit;
-	System.out.print(intToNBitBinaryStr(highBit,8) + "\n");
 	
 	// Get Right side of new set
 	// find starting point of new set's bottom clump select everything to right
 	// 00001010 // 18 / 2 == 4
 	// 00000011 // 4 - 1 == 3
 	int rightSide = (highBit / lowBit)-1;  //division returns size of clump
-	System.out.print(highBit + " --> " + lowBit + " --> " + highBit / lowBit + "\n");
-	System.out.print(intToNBitBinaryStr(highBit,8) + " --> " + intToNBitBinaryStr(lowBit,8) + " --> " + intToNBitBinaryStr(highBit / lowBit,8) + "\n");
-	System.out.print(intToNBitBinaryStr(rightSide,8) + "\n");
 	
 	// Get Left Side of new Set
 	// create left mask to clear everything right of highBit
@@ -98,10 +78,10 @@ public class BitwiseOperators {
 	// 01010011
 	// 01100000
 	int leftSide = highBit<<1 | ( ~((highBit<<1) - 1) & num );
-	System.out.print(intToNBitBinaryStr(leftSide,8) + "\n");
 	
 	return intToNBitBinaryStr(leftSide | rightSide, 8);
     }
+
 
     /* 
      * Convert integer, i, to binary string of min digits, pad
@@ -113,6 +93,7 @@ public class BitwiseOperators {
         
         return binStr;
     }
+
     
     /*
      * Convert binary string to base 10 integer
