@@ -1,4 +1,4 @@
-interview-problems
+boring-stuff
 ==================
 
-Collection of interview-style problems and solutions
+Boring Problems and Solutions :)
