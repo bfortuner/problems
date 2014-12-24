@@ -10,7 +10,7 @@ Boring Problems and Solutions :)
 - http://www.problee.com
 - http://codingbat.com
 - http://codepad.org
-
+- http://crazyforcode.com
 ##Problems
 
 ###Strings
