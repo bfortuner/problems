@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class isAnagram {
+public class IsAnagram {
 
     public static void main(String[] args) {
         String in1 = "abcd";
