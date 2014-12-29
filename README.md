@@ -23,6 +23,7 @@ Boring Problems and Solutions :)
 1. Sum3EqualsZero - Given array of integers, return true if any 3 elements in array sum to zero
 2. MaxContigSumArray - Given array of integers, return max sum of contiguous elements in array
 3. MaxSum3Array - Given array of integers, return max sum of 3 element subset
+4. SetMatrixToZero - If an element in a M x N matrix is zero, set its entire row and column to zero.
 
 ###Strings
 
@@ -34,3 +35,7 @@ Boring Problems and Solutions :)
 ###Math
 
 1. PowersOfTwo - Compute 2^2^n in linear time
+
+###Hash Tables
+
+1. Basic Implementation - Write a HashTable class with the methods Get, Put, and Delete
