@@ -38,4 +38,6 @@ Boring Problems and Solutions :)
 
 ###Hash Tables
 
-1. Basic Implementation - Write a HashTable class with the methods Get, Put, and Delete
+1. Open Addressing - Write a HashTable class that uses "probing" to resolve collisions (methods Get, Put, Remove)
+2. Chaining - Write a HashTable class that uses sub-lists to resolve collisions (methods Get, Put, Remove)
+3. Dynamic Resizing - Add dynamic resizing to either above implementations
