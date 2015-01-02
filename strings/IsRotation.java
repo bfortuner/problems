@@ -14,10 +14,13 @@ public class IsRotation {
         System.out.println(isRotation(str3, str4));
         System.out.println(isRotation(str5, str6));
 
+        System.out.println(isRotationSubstring(str1, str2));
+        System.out.println(isRotationSubstring(str3, str4));
+        System.out.println(isRotationSubstring(str5, str6));
     }
 
     /*
-     * Return true if str1 is a rotation of str1
+     * Return true if str2 is a rotation of str1
      */
     public static boolean isRotation(String str1, String str2) {
         int start = 0;
@@ -46,5 +49,20 @@ public class IsRotation {
         return false;
 
     }
+
+    /*
+     * Return true if str2 is a rotation of str1
+     * Using 1 call to Java method "contains" which returns whether a String is a substring
+     * str1 = "abcd"  -  abcd  |  bcda  |  cdab  |  dabc
+     * str2 = "cdab"
+     */
+    public static boolean isRotationSubstring(String str1, String str2) {
+        String newStr = "";
+        for (int i=0; i<str2.length(); i++) {
+            newStr = newStr + " " + str2.substring(i,str2.length()) + str2.substring(0,i);
+        }
+        return newStr.contains(str1);
+    }
+
 
 }
