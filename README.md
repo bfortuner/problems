@@ -29,8 +29,9 @@ Boring Problems and Solutions :)
 
 1. IsAnagram - Return true if two strings are anagrams (each string contains the exact same alpha-numeric characters and the same count)
 2. RemoveDuplicates - Given String of alpha-numeric characters, return String of distinct characters
-3. Reverse String - Given String, return String with characters in reverse order
-4. Replace Spaces - Given String, replace all spaces with HTML '%20'
+3. ReverseString - Given String, return String with characters in reverse order
+4. ReplaceSpaces - Given String, replace all spaces with HTML '%20'
+5. IsRotation - Return true if str2 is rotation of str1
 
 ###Math
 
@@ -38,6 +39,6 @@ Boring Problems and Solutions :)
 
 ###Hash Tables
 
-1. Open Addressing - Write a HashTable class that uses "probing" to resolve collisions (methods Get, Put, Remove)
-2. Chaining - Write a HashTable class that uses sub-lists to resolve collisions (methods Get, Put, Remove)
+1. Open Addressing - Write a HashTable class that uses "linear probing" to resolve collisions (methods Get, Put, Remove)
+2. Chaining - Write a HashTable class that uses LinkedLists to resolve collisions (methods Get, Put, Remove)
 3. Dynamic Resizing - Add dynamic resizing to either above implementations
