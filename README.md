@@ -45,5 +45,7 @@ Boring Problems and Solutions :)
 
 ###Linked Lists
 
-1. Doubly Linked List - Implement a Doubly Linked List
-2. Remove Duplicates - Remove duplicates from an unsorted Singly Linked List
+1. Double Linked List - Implement a Doubly Linked List
+2. Remove Duplicates - Remove duplicates from an unsorted Single Linked List
+3. Delete Node - Delete node in middle of Single Linked List given access to only that node
+4. Circular Linked List - Find the first node in a circular (corrupted) single linked list
