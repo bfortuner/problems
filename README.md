@@ -42,3 +42,8 @@ Boring Problems and Solutions :)
 1. Open Addressing - Write a HashTable class that uses "linear probing" to resolve collisions (methods Get, Put, Remove)
 2. Chaining - Write a HashTable class that uses LinkedLists to resolve collisions (methods Get, Put, Remove)
 3. Dynamic Resizing - Add dynamic resizing to either above implementations
+
+###Linked Lists
+
+1. Doubly Linked List - Implement a Doubly Linked List
+2. Remove Duplicates - Remove duplicates from an unsorted Singly Linked List
