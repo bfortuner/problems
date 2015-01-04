@@ -48,4 +48,6 @@ Boring Problems and Solutions :)
 1. Double Linked List - Implement a Doubly Linked List
 2. Remove Duplicates - Remove duplicates from an unsorted Single Linked List
 3. Delete Node - Delete node in middle of Single Linked List given access to only that node
-4. Circular Linked List - Find the first node in a circular (corrupted) single linked list
+4. Is Circular - Return true if single linked list is circular (corrupted)
+5. Circular Node - Find the first node in a circular single linked list
+5. Sum Two Lists - Add two numbers together. Each number's digits are stored in a Single Linked List in reverse order (e.g. 134 == 4 --> 3 --> 1)

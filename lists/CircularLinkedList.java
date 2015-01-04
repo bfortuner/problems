@@ -15,7 +15,8 @@ public class CircularLinkedList {
         Node n3 = new Node("C");
         n2.setNext(n3);
         n3.setNext(n1);
-        System.out.println(getFirstNode(l1).getValue());
+        //System.out.println(getFirstNode(l1).getValue());
+        System.out.println(isCircular(l1));
     }
 
     public static Node getFirstNode(SinglyLinkedList list) {
@@ -32,7 +33,21 @@ public class CircularLinkedList {
         return null;
     }
 
+    public static boolean isCircular(SinglyLinkedList list) {
+        Node f = list.getHead();
+        Node s = list.getHead();
+        while (f != null && f.getNext() != null) {
+            f = f.getNext().getNext();
+            s = s.getNext();
+            if (s == f) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static Node getFirstNodeNoBuffer(SinglyLinkedList list) {
+
         return null;
     }
 
