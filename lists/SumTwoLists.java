@@ -29,6 +29,10 @@ public class SumTwoLists {
 
         SinglyLinkedListInteger l3 = sumLists(l1, l2);
         printLinkedList(l3);
+
+        NodeInteger newNode = sumListsRecursive(l1, l2, 0);
+        printNodes(newNode);
+
     }
 
     public static SinglyLinkedListInteger sumLists(SinglyLinkedListInteger a, SinglyLinkedListInteger b) {
@@ -41,8 +45,13 @@ public class SumTwoLists {
         newList.setHead(newNode);
         while (nodeA != null && nodeB != null) {
             sum = nodeA.getValue() + nodeB.getValue();
-            carry = sum / 10;
-            newNode.setValue(newNode.getValue() + (sum % 10) );
+	    if (sum > 10) {
+		carry = sum % 10;
+		sum = sum / 10;
+	    } else {
+		carry = 0;
+	    }
+            newNode.setValue(newNode.getValue() + (sum) );
             newNode.setNext(new NodeInteger(carry));
             newNode = newNode.getNext();
             nodeA = nodeA.getNext();
@@ -51,11 +60,43 @@ public class SumTwoLists {
         return newList;
     }
 
+    public static NodeInteger sumListsRecursive(SinglyLinkedListInteger a, SinglyLinkedListInteger b, int carry) {
+        NodeInteger nodeA = a.getHead();
+        NodeInteger nodeB = b.getHead();
+	if (nodeA == null || nodeB == null) {
+	    if (carry > 0) {
+		return new NodeInteger(carry);
+	    } else {
+		return null;
+	    }
+	}
+	int sum = nodeA.getValue() + nodeB.getValue() + carry;
+	if (sum > 10) {
+	    carry = sum % 10;
+	    sum = sum / 10;
+	} else {
+	    carry = 0;
+	}
+        NodeInteger result = new NodeInteger(sum);
+	a.setHead(nodeA.getNext());
+	b.setHead(nodeB.getNext());
+	result.setNext(sumListsRecursive(a, b, carry));
+        return result;
+    }
+
     public static void printLinkedList(SinglyLinkedListInteger list) {
         NodeInteger next = list.getHead();
         while (next != null) {
             System.out.print(next.getValue() + " --> ");
             next = next.getNext();
+        }
+        System.out.println("");
+    }
+
+    public static void printNodes(NodeInteger node) {
+        while (node != null) {
+            System.out.print(node.getValue() + " --> ");
+            node = node.getNext();
         }
         System.out.println("");
     }
