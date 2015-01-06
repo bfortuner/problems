@@ -51,3 +51,10 @@ Boring Problems and Solutions :)
 4. Is Circular - Return true if single linked list is circular (corrupted)
 5. Circular Node - Find the first node in a circular single linked list
 5. Sum Two Lists - Add two numbers together. Each number's digits are stored in a Single Linked List in reverse order (e.g. 134 == 4 --> 3 --> 1)
+
+###Recursion
+
+1. Fibonacci - Write method to generate the nth fibonacci number
+2. Robot Squares - Imagine a robot sitting on the upper left hand corner of an NxN grid. The robot can only move in 2 directions: right and down. How many possible paths are there for the robot?
+3. String Permutations - Compute all permutations of a given string
+4. Powerset - Return all possible subsets of a set
