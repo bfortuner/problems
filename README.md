@@ -58,3 +58,4 @@ Boring Problems and Solutions :)
 2. Robot Squares - Imagine a robot sitting on the upper left hand corner of an NxN grid. The robot can only move in 2 directions: right and down. How many possible paths are there for the robot?
 3. String Permutations - Compute all permutations of a given string
 4. Powerset - Return all possible subsets of a set
+5. Valid Parentheses Pairs - Print all valid (e.g. properly opened and closed) combinations of n-pairs of parentheses. Input: 3, Output: ((())), (()()), (())(), ()(()), ()()()

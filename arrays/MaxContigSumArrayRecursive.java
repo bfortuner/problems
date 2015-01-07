@@ -20,13 +20,13 @@ public class MaxContigSumArrayRecursive {
 	right.add(2);
 	right.add(-6);
 	right.add(4);
-	int maxSum = getCombo(left,right);
+	//int maxSum = getCombo(left,right);
 	//System.out.println(maxSum);
 
 	List<Integer> combined = new ArrayList(left);
 	combined.addAll(right);
 	printArrayList(combined);
-	maxSum = getMaxContigSum2(combined);
+	int maxSum = getMaxContigSum2(combined);
 	System.out.println(maxSum);
     }
 
@@ -55,12 +55,12 @@ public class MaxContigSumArrayRecursive {
 	    List<Integer> right = nums.subList(nums.size()/2, nums.size());
 	    int leftMax = getMaxContigSum2(left);
 	    int rightMax = getMaxContigSum2(right);
-	    int combo = getCombo(left,right);
-	    return Math.max(Math.max(leftMax, rightMax), combo);
+	    int middle = getCombinedMiddle(left,right);
+	    return Math.max(Math.max(leftMax, rightMax), middle);
 	}
     }
 
-    public static int getCombo(List<Integer> left, List<Integer> right) {
+    public static int getCombinedMiddle(List<Integer> left, List<Integer> right) {
 	int leftMax = 0;
 	int i = left.size()-1;
 	int leftSum = 0;
