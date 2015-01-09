@@ -61,3 +61,4 @@ Boring Problems and Solutions :)
 5. PowersetM - Return all subsets of a set having M elements (Recursive, Iterative)
 6. Valid Parentheses Pairs - Print all valid (e.g. properly opened and closed) combinations of n-pairs of parentheses. Input: 3, Output: ((())), (()()), (())(), ()(()), ()()()
 7. Cents Combos - Given an infinite number of coins (25 cents, 10, 5, 1), return the number of possible ways of representing N cents.
+8. Paint Fill - Implement the "paint fill" function one might see on an image editing program. Given a 2 dimensional matrix array of Colors, fill in the surrounding area until you hit a border or another filled-in square.
