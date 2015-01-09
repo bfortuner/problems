@@ -60,3 +60,4 @@ Boring Problems and Solutions :)
 4. Powerset - Return all possible subsets of a set (Recursive solution, Iterative, Bit Manipulation no loops)
 5. PowersetM - Return all subsets of a set having M elements (Recursive, Iterative)
 6. Valid Parentheses Pairs - Print all valid (e.g. properly opened and closed) combinations of n-pairs of parentheses. Input: 3, Output: ((())), (()()), (())(), ()(()), ()()()
+7. Cents Combos - Given an infinite number of coins (25 cents, 10, 5, 1), return the number of possible ways of representing N cents.
