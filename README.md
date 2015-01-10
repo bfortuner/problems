@@ -24,6 +24,8 @@ Boring Problems and Solutions :)
 2. MaxContigSumArray - Given array of integers, return max sum of contiguous elements in array
 3. MaxSum3Array - Given array of integers, return max sum of 3 element subset
 4. SetMatrixToZero - If an element in a M x N matrix is zero, set its entire row and column to zero.
+5. FindOnesInMatrix - Given a 2D SORTED matrix, return the row index with the most ones
+6. MajorityElement - given a array of integers, print out the element that appears more than n/2 times. Otherwise print not found.
 
 ###Strings
 
@@ -62,3 +64,6 @@ Boring Problems and Solutions :)
 6. Valid Parentheses Pairs - Print all valid (e.g. properly opened and closed) combinations of n-pairs of parentheses. Input: 3, Output: ((())), (()()), (())(), ()(()), ()()()
 7. Cents Combos - Given an infinite number of coins (25 cents, 10, 5, 1), return the number of possible ways of representing N cents.
 8. Paint Fill - Implement the "paint fill" function one might see on an image editing program. Given a 2 dimensional matrix array of Colors, fill in the surrounding area until you hit a border or another filled-in square.
+
+###Trees
+1.Count Nodes at k distance - Given a binary tree, print the nodes k distance away from a target node
