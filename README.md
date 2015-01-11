@@ -38,6 +38,7 @@ Boring Problems and Solutions :)
 ###Math
 
 1. PowersOfTwo - Compute 2^2^n in linear time
+2. Swap Integers - Swap two integers in an array without using temporary variables
 
 ###Hash Tables
 
