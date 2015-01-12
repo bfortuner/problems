@@ -1,9 +1,10 @@
 package lists;
 
 public class NodeInteger {
-	NodeInteger next;
+    NodeInteger next;
     NodeInteger prior;
-	int value;
+    int value;
+    int min;
 
     public NodeInteger(int value) {
         this.value = value;
@@ -12,15 +13,21 @@ public class NodeInteger {
     public void setNext(NodeInteger next) {
         this.next = next;
     }
-	public void setPrior(NodeInteger prior) {
-		this.prior = prior;
-	}
-	public void setValue(int value) {
-		this.value = value;
-	}
-	public int getValue() {
-		return this.value;
-	}
+    public void setPrior(NodeInteger prior) {
+	this.prior = prior;
+    }
+    public void setMin(int val) {
+	this.min = val;
+    }
+    public int getMin() {
+	return this.min;
+    }
+    public void setValue(int value) {
+	this.value = value;
+    }
+    public int getValue() {
+	return this.value;
+    }
     public NodeInteger getNext() {
         return this.next;
     }
