@@ -9,19 +9,22 @@ public class QueensChess {
 		placeQueens(in1, 2, 0, 0);
    	}
 
-   	public static void placeQueens(int[][] board, int queens, int row, int col) {
+    public static void placeQueens(int[][] board, int queens, int row, int col) {
         if (queens == 0) {
             printArray(board);
-        } else if (spotOnBoard(board, row, col)) {
-            //doo something
-            if (spotEligible(board, row, col)) {
-                board[row][col] = 1;
-                placeQueens(board, queens-1, row+1, col+1);
-            }
-            board[row][col] = 0;
-            placeQueens(board, queens, row+1, col);
-            placeQueens(board, queens, row, col+1);
-
+        } else if (!spotOnBoard(board, row, col)) {
+	    //do nothing
+	} else if (spotEligible(board, row, col) ) {
+	    System.out.println("spot is not eligible");
+	    board[row][col] = 1;
+	    placeQueens(board, queens-1, row+1, col);
+	    board[row][col] = 0;
+	    placeQueens(board, queens, row, col+1);
+	    //do nothing
+	} else {
+	    placeQueens(board, queens, row, col+1);
+	    placeQueens(board, queens, row+1, col);
+	    //placeQueens(board, queens-1, row-1, col-1);
         }
     }
 
@@ -36,7 +39,7 @@ public class QueensChess {
     }
 
     private static boolean spotEligible(int[][] board, int row, int col) {
-        for (int i=0; i< board.length; i++) {
+        for (int i=0; i<board.length; i++) {
             if (board[i][col] == 1) {
                 return false;
             }
