@@ -74,6 +74,7 @@ Boring Problems and Solutions :)
 2. Single Array - Implement 3 stacks using a single array
 3. Set of Stacks - Consider a Stack of plates. If one stack gets too high, create a new stack of plates. Implement a special stack that holds these multiple stacks. When the first stack passes some threshold, the class creates a new stack and continues. Implement both Push and Pop methods.
 4. Towers of Hanoi - 
+5. Sort Stack - Write a method to sort a stack in ascending order using Push, Pop, Peek, and IsEmpty.
 
 
 ###Queues
