@@ -67,7 +67,10 @@ Boring Problems and Solutions :)
 8. Paint Fill - Implement the "paint fill" function one might see on an image editing program. Given a 2 dimensional matrix array of Colors, fill in the surrounding area until you hit a border or another filled-in square.
 
 ###Trees
-1.Count Nodes at k distance - Given a binary tree, print the nodes k distance away from a target node
+1. Count Nodes at k distance - Given a binary tree, print the nodes k distance away from a target node
+2. Implement TreeNode - That stores integers and has methods getParent(), setParent(), getChildren(), addChild(), removeChild(), getValue(), setValue()
+3. Implement Tree - With methods..
+4. Implement BinaryTree - With methods..
 
 ###Stacks
 1. Implement Stack - Push and Pop methods
@@ -75,7 +78,6 @@ Boring Problems and Solutions :)
 3. Set of Stacks - Consider a Stack of plates. If one stack gets too high, create a new stack of plates. Implement a special stack that holds these multiple stacks. When the first stack passes some threshold, the class creates a new stack and continues. Implement both Push and Pop methods.
 4. Towers of Hanoi - 
 5. Sort Stack - Write a method to sort a stack in ascending order using Push, Pop, Peek, and IsEmpty.
-
 
 ###Queues
 1. Implement Queue - Enqueue and Dequeue methods
