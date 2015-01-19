@@ -68,9 +68,9 @@ Boring Problems and Solutions :)
 
 ###Trees
 1. Count Nodes at k distance - Given a binary tree, print the nodes k distance away from a target node
-2. Implement TreeNode - That stores integers and has methods getParent(), setParent(), getChildren(), addChild(), removeChild(), getValue(), setValue()
-3. Implement Tree - With methods..
-4. Implement BinaryTree - With methods..
+2. Implement Tree - That stores integers and has methods getParent(), setParent(), getChildren(), addChild(), removeChild(), getValue(), setValue()
+3. Implement BinaryTree - That stores Strings with methods setParent, setValue, setLeftChild, setRightChild
+4. Parse Tree Equation - Use BinaryTree to implement a mathematical equation parser. From equations list this, (3 + (4 * 5)), return a Binary tree that holds this equation
 
 ###Stacks
 1. Implement Stack - Push and Pop methods
