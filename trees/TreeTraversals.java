@@ -33,6 +33,13 @@ public class TreeTraversals {
           D  E  F  G
  
 	 */
+
+	System.out.println("insertChild---");
+	BinaryTree t8 = new BinaryTree("H");
+	insertChild(tree, t8);
+	System.out.println(tree.getLeftChild().getLeftChild().getLeftChild().getValue());
+	preOrder(tree);
+	
     }
 
     public static void preOrder(BinaryTree tree) {
@@ -65,6 +72,17 @@ public class TreeTraversals {
 	    postOrder(tree.getLeftChild());
 	    postOrder(tree.getRightChild());
 	    System.out.println(tree.getValue());
+	}
+    }
+
+    public static void insertChild(BinaryTree tree, BinaryTree child) {
+	if (tree.getLeftChild() == null) {
+	    tree.setLeftChild(child);
+	} else if (tree.getRightChild() == null) {
+	    tree.setRightChild(child);
+	} else {
+	    insertChild(tree.getLeftChild(), child);
+	    insertChild(tree.getRightChild(), child);
 	}
     }
 
