@@ -71,6 +71,7 @@ Boring Problems and Solutions :)
 2. Implement Tree - That stores integers and has methods getParent(), setParent(), getChildren(), addChild(), removeChild(), getValue(), setValue()
 3. Implement BinaryTree - That stores Strings with methods setParent, setValue, setLeftChild, setRightChild
 4. Parse Tree Equation - Use BinaryTree to implement a mathematical equation parser. From equations list this, (3 + (4 * 5)), return a Binary tree that holds this equation
+5. Tree Traversals - Write methods to print out root nodes using PreOrder, InOrder, and PostOrder algorithms
 
 ###Stacks
 1. Implement Stack - Push and Pop methods
