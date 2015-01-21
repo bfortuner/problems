@@ -11,6 +11,7 @@ Boring Problems and Solutions :)
 - http://codingbat.com
 - http://codepad.org
 - http://crazyforcode.com
+- http://www.cs.usfca.edu/~galles/visualization/Algorithms.html
 
 ##Problems
 
