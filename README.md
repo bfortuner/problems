@@ -35,6 +35,7 @@ Boring Problems and Solutions :)
 3. ReverseString - Given String, return String with characters in reverse order
 4. ReplaceSpaces - Given String, replace all spaces with HTML '%20'
 5. IsRotation - Return true if str2 is rotation of str1
+6. ReverseStringInplace - Reverses a string inplace
 
 ###Math
 
