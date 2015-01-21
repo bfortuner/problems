@@ -83,3 +83,6 @@ Boring Problems and Solutions :)
 ###Queues
 1. Implement Queue - Enqueue and Dequeue methods
 2. Queue With Stacks - Implement a queue using 2 Stacks
+
+###Heaps
+1. Binary Heap - Implement a Binary Heap of integers with methods - isEmpty(), getSize(), getMin(), deleteMin(), buildBinaryTreeFromList(), insertElement()
