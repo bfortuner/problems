@@ -15,13 +15,13 @@ public class TreeNode {
         parent = node;
     }
     public TreeNode getParent() {
-	    return parent;
+	return parent;
     }
     public void setValue(int val) {
-	    this.value = val;
+	this.value = val;
     }
     public int getValue() {
-	    return value;
+	return value;
     }
     public TreeNode getChild(int index) {
         return children.get(index);

@@ -23,9 +23,11 @@ public class BinaryTree {
         this.value = val;
     }
     public void setLeftChild(BinaryTree child) {
+	child.setParent(this);
 	this.leftChild = child;
     }
     public void setRightChild(BinaryTree child) {
+	child.setParent(this);
 	this.rightChild = child;
     }
     public BinaryTree getLeftChild() {
