@@ -55,7 +55,7 @@ Boring Problems and Solutions :)
 3. Delete Node - Delete node in middle of Single Linked List given access to only that node
 4. Is Circular - Return true if single linked list is circular (corrupted)
 5. Circular Node - Find the first node in a circular single linked list
-5. Sum Two Lists - Add two numbers together. Each number's digits are stored in a Single Linked List in reverse order (e.g. 134 == 4 --> 3 --> 1)
+6. Sum Two Lists - Add two numbers together. Each number's digits are stored in a Single Linked List in reverse order (e.g. 134 == 4 --> 3 --> 1) ** also done in c++ ** 
 
 ###Recursion
 
@@ -74,7 +74,7 @@ Boring Problems and Solutions :)
 3. Implement BinaryTree - That stores Strings with methods setParent, setValue, setLeftChild, setRightChild
 4. Parse Tree Equation - Use BinaryTree to implement a mathematical equation parser. From equations list this, (3 + (4 * 5)), return a Binary tree that holds this equation
 5. Tree Traversals - Write methods to print out root nodes using PreOrder, InOrder, and PostOrder algorithms
-6. First Common Ancestor - Find the first common ancestor of two nodes in a binary tree. Avoid using additional data structures if possible.
+6. First Common Ancestor - Find the first common ancestor of two nodes in a binary tree. Avoid using additional data structures if possible. *** Java and CPP solutions
 7. Min Height Tree - Given a sorted Array of Strings build the Binary Search Tree of minimal height.
 8. Binary Search Tree - Implement a Binary Search Tree with methods Get(), Put(), and Delete()
 
