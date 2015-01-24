@@ -76,6 +76,7 @@ Boring Problems and Solutions :)
 5. Tree Traversals - Write methods to print out root nodes using PreOrder, InOrder, and PostOrder algorithms
 6. First Common Ancestor - Find the first common ancestor of two nodes in a binary tree. Avoid using additional data structures if possible.
 7. Min Height Tree - Given a sorted Array of Strings build the Binary Search Tree of minimal height.
+8. Binary Search Tree - Implement a Binary Search Tree with methods Get(), Put(), and Delete()
 
 ###Stacks
 1. Implement Stack - Push and Pop methods
