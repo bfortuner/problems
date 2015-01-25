@@ -78,6 +78,7 @@ Boring Problems and Solutions :)
 7. Min Height Tree - Given a sorted Array of Strings build the Binary Search Tree of minimal height.
 8. Binary Search Tree - Implement a Binary Search Tree with methods Get(), Put(), and Delete()
 9. Sub Tree of Binary Tree - Given two binary trees, S and T, determine if S is a subtree of T.
+10. In Order Traversal of binary tree
 
 ###Stacks
 1. Implement Stack - Push and Pop methods
