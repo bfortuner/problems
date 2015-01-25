@@ -93,10 +93,10 @@ int main()
     T->left->left = newNode('c');
     T->right->right = newNode('e');
  
-    Node *S = newNode('a');
-    S->left = newNode('b');
-    S->left->left = newNode('c');
-    S->right = newNode('d');
+    Node *S = newNode('b');
+    S->left = newNode('c');
+    // S->left->left = newNode('c');
+    // S->right = newNode('d');
  
     if (isSubtree(T, S))
         cout << "Yes: S is a subtree of T";
@@ -108,10 +108,3 @@ int main()
 
 
 
-
-
-int main () {
-
-
-	return 0;
-}
