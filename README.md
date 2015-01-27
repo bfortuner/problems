@@ -80,6 +80,7 @@ Boring Problems and Solutions :)
 8. Binary Search Tree - Implement a Binary Search Tree with methods Get(), Put(), and Delete()
 9. Sub Tree of Binary Tree - Given two binary trees, S and T, determine if S is a subtree of T.
 10. In Order Traversal of binary tree
+11. Sum of 2 Nodes in BST- Given a binary search tree and an integer k, find two nodes whose values sum up to k.
 
 ###Stacks
 1. Implement Stack - Push and Pop methods
