@@ -81,6 +81,7 @@ Boring Problems and Solutions :)
 9. Sub Tree of Binary Tree - Given two binary trees, S and T, determine if S is a subtree of T.
 10. In Order Traversal of binary tree
 11. Sum of 2 Nodes in BST- Given a binary search tree and an integer k, find two nodes whose values sum up to k.
+12. Is Subtree - Assume you have two Binary Trees--t1 has millions of nodes and t2 has hundreds of nodes. Return true if t2 is a subtree of t1 (i.e. root of t2 is a node in t1)
 
 ###Stacks
 1. Implement Stack - Push and Pop methods

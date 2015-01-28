@@ -19,6 +19,15 @@ public class BinaryHeap {
 	h1.delMin();
 	h1.delMin();
 	printList(h1.heap);
+
+	List<Integer> l1 = new ArrayList();
+	l1.add(9);
+	l1.add(6);
+	l1.add(5);
+	l1.add(2);
+	l1.add(3);
+	BinaryHeap h2 = h1.buildHeap(l1);
+	printList(h2.heap);
     }
 
     public List<Integer> heap;
@@ -55,9 +64,17 @@ public class BinaryHeap {
 	return this.size;
     }
 
-    //Need To Implement
     public BinaryHeap buildHeap(List<Integer> list) {
-	return new BinaryHeap();
+	int i = list.size() / 2;
+	BinaryHeap newHeap = new BinaryHeap();
+	newHeap.size = list.size();
+	list.add(0,0);
+	newHeap.heap = list;
+	while (i > 0) {
+	    newHeap.percDown(i);
+	    i--;
+	}
+	return newHeap;
     }
 
     /*
