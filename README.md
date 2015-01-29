@@ -42,6 +42,7 @@ Boring Problems and Solutions :)
 1. PowersOfTwo - Compute 2^2^n in linear time
 2. Swap Integers - Swap two integers in an array without using temporary variables
 3. Sum Two Arrays - Write method to sum 2 arrays and return a new array. Arrays can be of different lengths. e.g. [1,3] + [1,0,0] == [1,1,3]
+4. Smallest Number > k - Write method to find the smallest number which is greater than a given number k and has SAME SET OF DIGITS as given number
 
 ###Hash Tables
 
