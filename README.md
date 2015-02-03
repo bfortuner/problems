@@ -105,3 +105,4 @@ Boring Problems and Solutions :)
 1. Implement a Directed Graph using the Adjacent List technique
 2. BFS - Find the Vertex in a Graph that holds the key "E" using Breadth First Search.
 3. DFS - Implement Recursive and Iterative versions of Depth-First Search, which visit and print out every Vertex in Graph
+4. Topological Sort - Implement Recursive (DFS) and Iterative versions of Topological Sort

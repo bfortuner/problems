@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Set;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collection;
 
 
 public class Graph {
@@ -23,6 +24,9 @@ public class Graph {
 	g1.addEdge(v1.getKey(),v2.getKey(),9);
 	g1.addEdge(v1.getKey(),v3.getKey(),2);
 	printGraph(g1);
+	System.out.println(v3.getIncomingEdges().size() == 1);
+	v3.removeIncomingEdge(v1);
+	System.out.println(v3.getIncomingEdges().size() == 0);
 	
     }
 
@@ -41,12 +45,18 @@ public class Graph {
 	return vertices.keySet();
     }
 
+    public Collection<Vertex> getVerticesVals() {
+	return vertices.values();
+    }
+
     public void addEdge(String from, String to, int cost) {
 	if (!vertices.containsKey(to)) {
 	    addVertex(to);
 	}
+	Vertex toVertex = getVertex(to);
 	Vertex fro = vertices.get(from);
 	fro.addNeighbor(to, cost);
+	toVertex.addIncomingEdge(fro);
     } 
 
     public static void printGraph(Graph g) {

@@ -3,11 +3,14 @@ package graphs;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Set;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Vertex {
 
     String key;
     Map<String,Integer> edges = new HashMap(); 
+    List<Vertex> incomingEdges = new ArrayList(); 
     int totalEdges = 0;
     int distance;
     String color = "white";
@@ -47,6 +50,15 @@ public class Vertex {
     }
     public void setPredecessor(Vertex pred) {
 	this.predecessor = pred;
+    }
+    public void addIncomingEdge(Vertex v) {
+	this.incomingEdges.add(v);
+    }
+    public void removeIncomingEdge(Vertex v) {
+	this.incomingEdges.remove(v);
+    }
+    public List<Vertex> getIncomingEdges() {
+	return this.incomingEdges;
     }
 
 }
