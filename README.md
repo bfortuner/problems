@@ -58,6 +58,7 @@ Boring Problems and Solutions :)
 4. Is Circular - Return true if single linked list is circular (corrupted)
 5. Circular Node - Find the first node in a circular single linked list
 6. Sum Two Lists - Add two numbers together. Each number's digits are stored in a Single Linked List in reverse order (e.g. 134 == 4 --> 3 --> 1) ** also done in c++ ** 
+7. Find Intersection of Two lists - Given two lists, find the node at which they intersect and become one list
 
 ###Recursion
 
