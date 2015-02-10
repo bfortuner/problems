@@ -19,6 +19,10 @@ Boring Problems and Solutions :)
 
 1. Selection Sort - Implement and describe complexity
 
+###Searching
+
+1. Binary Search - Write method to return True if integer is in array
+
 ###Arrays
 
 1. Sum3EqualsZero - Given array of integers, return true if any 3 elements in array sum to zero
