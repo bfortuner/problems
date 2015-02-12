@@ -90,6 +90,7 @@ Boring Problems and Solutions :)
 11. Sum of 2 Nodes in BST- Given a binary search tree and an integer k, find two nodes whose values sum up to k.
 12. Is Subtree - Assume you have two Binary Trees--t1 has millions of nodes and t2 has hundreds of nodes. Return true if t2 is a subtree of t1 (i.e. root of t2 is a node in t1)
 13. Find_paths - Given a binary tree and an integer k, print all paths that sum up to k
+14. Build Binary Search Tree - Given an array of strings, build a binary search tree. You can use the BinaryTree helper class.
 
 ###Stacks
 1. Implement Stack - Push and Pop methods
