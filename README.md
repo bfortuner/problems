@@ -91,6 +91,9 @@ Boring Problems and Solutions :)
 12. Is Subtree - Assume you have two Binary Trees--t1 has millions of nodes and t2 has hundreds of nodes. Return true if t2 is a subtree of t1 (i.e. root of t2 is a node in t1)
 13. Find_paths - Given a binary tree and an integer k, print all paths that sum up to k
 14. Build Binary Search Tree - Given an array of strings, build a binary search tree. You can use the BinaryTree helper class.
+15. Print Path To Key - You are given a Binary Search Tree. Write an algorithm to print the Path Array of a given key. PATH ARRAY:
+a) If the given key is not present in the tree than the Path Array is equal to “-1”
+b) If the given key is present in the BST, path array tells you the path (in terms of left & right direction) that you take from root to reach the given key. If you go towards right add “0” to the path array and if you go towards left add “1” to Path Array.
 
 ###Stacks
 1. Implement Stack - Push and Pop methods
