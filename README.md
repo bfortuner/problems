@@ -22,6 +22,7 @@ Boring Problems and Solutions :)
 ###Searching
 
 1. Binary Search - Write method to return True if integer is in array
+2. Binary Search w Pivot - An element in a sorted array can be found in O(log n) time via binary search. But suppose I rotate the sorted array at some pivot unknown to you beforehand. So for instance, 1 2 3 4 5 might become 3 4 5 1 2. Devise a way to find an element in the rotated array in O(log n) time. If not found, return -1.
 
 ###Arrays
 
