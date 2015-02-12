@@ -4,14 +4,16 @@ public class BinarySearch {
 
     public static void main(String[] args) {
 	int[] arr = {1,2,3,4}; //{-3,2,5,8,22,67,89,101};
-	for (int i : arr) {
-	    System.out.println(i);
-	}
-	System.out.println(binarySearch(arr,1) == true);
-	System.out.println(binarySearch(arr,4) == true);
-	System.out.println(binarySearch(arr,2) == true);
-	System.out.println(binarySearch(arr,-3) == false);
-	//System.out.println(binarySearch(arr,101) == true);
+	System.out.println(binarySearchIterative(arr,1) == true);
+	System.out.println(binarySearchIterative(arr,4) == true);
+	System.out.println(binarySearchIterative(arr,2) == true);
+	System.out.println(binarySearchIterative(arr,-3) == false);
+
+	System.out.println(binarySearchRecursive(arr,1,0,arr.length) == 0);
+	System.out.println(binarySearchRecursive(arr,4,0,arr.length) == 3);
+	System.out.println(binarySearchRecursive(arr,2,0,arr.length) == 1);
+	System.out.println(binarySearchRecursive(arr,-3,0,arr.length) == -1);
+
     }
 
     /*
@@ -19,21 +21,38 @@ public class BinarySearch {
      * [1,3,5,6,7]
      * [1,2,3,4]
      */
-    public static boolean binarySearch(int[] arr, int target) {
-	int high = arr.length-1;
+    public static boolean binarySearchIterative(int[] arr, int target) {
 	int low = 0;
-	int mid = (high - low) / 2;
-	while (high >= low) {
+	int high = arr.length;
+	while (low < high) {
+	    int mid = (high + low) / 2;
 	    if (arr[mid] == target) {
 		return true;
-	    } else if (target > arr[mid]) {
-		low = mid+1;
+	    } else if (target < arr[mid]) {
+		high = mid;
 	    } else {
-		high = mid-1;
+		low = mid+1;
 	    }
-	    mid = low + (high - low) / 2;
 	}
 	return false;
+    }
+
+    /*
+     * Return index if int is in Array, else -1
+     * [1,3,5,6,7]
+     * [1,2,3,4]
+     */
+    public static int binarySearchRecursive(int[] arr, int target, int low, int high) {
+	int mid = (high + low) / 2;
+	if (low > high) {
+	    return -1;
+	} else if (arr[mid] == target) {
+	    return mid;
+	} else if (target < arr[mid]) {
+	    return binarySearchRecursive(arr, target, low, mid-1);
+	} else {
+	    return binarySearchRecursive(arr, target, mid+1, high);
+	}
     }
 
 

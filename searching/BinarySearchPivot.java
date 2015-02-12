@@ -8,6 +8,16 @@ public class BinarySearchPivot {
 	System.out.println(binarySearchPivot(arr,4) == 1);
 	System.out.println(binarySearchPivot(arr,2) == 4);
 	System.out.println(binarySearchPivot(arr,-3) == -1);
+	int[] arr2 = {2,3,1};
+	System.out.println(binarySearchPivot(arr,1) == 2);
+	System.out.println(binarySearchPivot(arr,3) == 1);
+	System.out.println(binarySearchPivot(arr,2) == 0);
+	System.out.println(binarySearchPivot(arr,-3) == -1);
+	int[] arr3 = {7,1,2,3,6};
+	System.out.println(binarySearchPivot(arr,1) == 1);
+	System.out.println(binarySearchPivot(arr,3) == 3);
+	System.out.println(binarySearchPivot(arr,7) == 0);
+	System.out.println(binarySearchPivot(arr,6) == 4);
     }
 
     /*
@@ -17,7 +27,7 @@ public class BinarySearchPivot {
 	int low = 0;
 	int high = arr.length;
 	while (low < high) {
-	    int mid = low + ((high - low) / 2);
+	    int mid = (high + low) / 2;
 	    if (arr[mid] == target) {
 		return mid;
 	    } else if (target < arr[mid]) {
