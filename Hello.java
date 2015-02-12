@@ -2,8 +2,11 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.io.*;  //InputStream, InputStreamReader, BufferedReader
+import math.Counter;
 
 public class Hello {
+    
+    public int count = 0;
 
     public static void main(String[] args) {
 
@@ -36,6 +39,24 @@ public class Hello {
 	String f = "README.md";
 	readFile(f);
 
+	System.out.println("=====================");
+	
+	String s = "A";
+	changeStr(s);
+	System.out.println(s.equals("A"));
+
+	Counter c = new Counter();
+	increment(c);
+	System.out.println(c.count);
+
+    }
+
+    public static void changeStr(String s) {
+	s = "e";
+    }
+
+    public static void increment(Counter c) {
+	c.count = 3;
     }
 
     public static void readFile(String filename) {
