@@ -18,6 +18,7 @@ Boring Problems and Solutions :)
 ###Sorting
 
 1. Selection Sort - Implement and describe complexity
+2. Sort Array012 - Sort an array that contains only the integers 0, 1, and 2 in linear time. (e.g. [1,0,2,2,1] == [0,1,1,2,2]) 
 
 ###Searching
 
