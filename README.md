@@ -50,6 +50,7 @@ Boring Problems and Solutions :)
 3. Sum Two Arrays - Write method to sum 2 arrays and return a new array. Arrays can be of different lengths. e.g. [1,3] + [1,0,0] == [1,1,3]
 4. Smallest Number > k - Write method to find the smallest number which is greater than a given number k and has SAME SET OF DIGITS as given number
 5. Find Missing Integer - Given an array of sorted consecutive integers, return the missing integer (or -1 if no integer is missing). E.g. [3,4,6,7] == 4. Complete solutions in both O(n) and O(log n) time. Follow-up: write a method that handles an unsorted array of integers between 0 and N in O(N) time. e.g. [3,5,7,4] == 6 
+6. P99 Website Latency - Given an unsorted array of floats between 0 and 1, representing website latency times, return the 99th percentile time (the time that is greater than 99% of other times). This is an important metric in software development to identify worst case issues for users. Follow-up: Instead of an array, assume you are receiving an infinite stream of latency times and can't store them all. Create a Class to store these times and return the P99 at any given moment (methods void putTime(double time), double getP99()). Follow-up: Update your methods to handle variable percentiles (60th, 85th) and latency ranges (3 - 7 seconds).  
 
 ###Hash Tables
 
