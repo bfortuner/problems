@@ -32,6 +32,7 @@ Boring Problems and Solutions :)
 4. SetMatrixToZero - If an element in a M x N matrix is zero, set its entire row and column to zero.
 5. FindOnesInMatrix - Given a 2D SORTED matrix, return the row index with the most ones
 6. MajorityElement - given a array of integers, print out the element that appears more than n/2 times. Otherwise print not found.
+7. Platforms Train Station - Given arrival and departure times of all trains that reach a railway station, find the minimum number of platforms required for the railway station so that no train waits. We are given two arrays which represent arrival and departure times of trains that stop. Input:  arr[]  = {9:00,  9:40, 9:50,  11:00, 15:00, 18:00}, dep[]  = {9:10, 12:00, 11:20, 11:30, 19:00, 20:00}, Output: 3. There are at-most three trains at a time (time between 11:00 to 11:20)
 
 ###Strings
 

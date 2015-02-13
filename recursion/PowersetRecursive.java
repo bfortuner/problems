@@ -1,6 +1,7 @@
 package recursion;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Arrays;
 
 public class PowersetRecursive {
@@ -18,6 +19,17 @@ public class PowersetRecursive {
 	set2 = "abcde";
         ArrayList<String> pset = getPowerset(set2, "");
 	printArrayList(pset, set2);
+
+
+	String[] arr = {"a","b","c","d"};
+	List<List<String>> pset2 = getPowersetList(arr,0,new ArrayList<String>());
+	for (List<String> subset : pset2) {
+	    for (String s : subset) {
+		System.out.print(s);
+	    }
+	    System.out.println(" ");
+	}
+
     }
 
     public static ArrayList<String> getPowerset(String set, String subset) {
@@ -33,6 +45,21 @@ public class PowersetRecursive {
 	    return list;
 	}
 
+    }
+
+    public static List<List<String>> getPowersetList(String[] arr, int start, List<String> subset) {
+	List<List<String>> list = new ArrayList();
+	if (start > arr.length-1) {
+	    list.add(subset);
+	    return list;
+	} else {
+	    List<List<String>> withOut = getPowersetList(arr, start+1, subset);
+	    subset.add(arr[start]);
+	    List<List<String>> with = getPowersetList(arr, start+1, subset);
+	    list.addAll(with);
+	    list.addAll(withOut);
+	    return list;
+	}
     }
 
     /*

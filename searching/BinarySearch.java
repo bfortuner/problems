@@ -14,6 +14,17 @@ public class BinarySearch {
 	System.out.println(binarySearchRecursive(arr,2,0,arr.length) == 1);
 	System.out.println(binarySearchRecursive(arr,-3,0,arr.length) == -1);
 
+	int[] arr2 = {-3,2,5,8,22,67,89,101};
+	System.out.println(binarySearchIterative(arr2,101) == true);
+	System.out.println(binarySearchIterative(arr2,-3) == true);
+	System.out.println(binarySearchIterative(arr2,8) == true);
+	System.out.println(binarySearchIterative(arr2,99) == false);
+
+	System.out.println(binarySearchRecursive(arr2,-3,0,arr2.length-1) == 0);
+	System.out.println(binarySearchRecursive(arr2,101,0,arr2.length-1) == arr2.length-1);
+	System.out.println(binarySearchRecursive(arr2,8,0,arr2.length-1) == 3);
+	System.out.println(binarySearchRecursive(arr2,99,0,arr2.length-1) == -1);
+
     }
 
     /*
