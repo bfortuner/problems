@@ -19,6 +19,13 @@ Boring Problems and Solutions :)
 
 1. Selection Sort - Implement and describe complexity
 2. Sort Array012 - Sort an array that contains only the integers 0, 1, and 2 in linear time. (e.g. [1,0,2,2,1] == [0,1,1,2,2]) 
+3. Insertion Sort - Implement and describe complexity
+4. Bubble Sort - Implement and describe complexity
+5. Counting Sort - Implement and describe complexity
+6. Bucket Sort - Implement and describe complexity
+7. Merge Sort - Implement and describe complexity
+8. Quick Sort - Implement and describe complexity
+9. Heap Sort - Implement and describe complexity
 
 ###Searching
 
