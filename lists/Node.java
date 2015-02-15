@@ -1,11 +1,11 @@
 package lists;
 
-public class Node {
+public class Node<T> {
 	Node next;
     Node prior;
-	String value;
+	T value;
 
-    public Node(String value) {
+    public Node(T value) {
         this.value = value;
     }
 
@@ -15,10 +15,10 @@ public class Node {
 	public void setPrior(Node prior) {
 		this.prior = prior;
 	}
-	public void setValue(String value) {
+	public void setValue(T value) {
 		this.value = value;
 	}
-	public String getValue() {
+	public T getValue() {
 		return this.value;
 	}
     public Node getNext() {
