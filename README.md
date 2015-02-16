@@ -26,6 +26,7 @@ Boring Problems and Solutions :)
 7. Merge Sort - Implement and describe complexity
 8. Quick Sort - Implement and describe complexity
 9. Heap Sort - Implement and describe complexity
+10. Shell Sort - Implement and describe complexity
 
 ###Searching
 
