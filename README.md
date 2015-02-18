@@ -51,6 +51,7 @@ Boring Problems and Solutions :)
 4. ReplaceSpaces - Given String, replace all spaces with HTML '%20'
 5. IsRotation - Return true if str2 is rotation of str1
 6. ReverseStringInplace - Reverses a string inplace
+7. [FindFirstUniqueChar] - Return the first non-repeated character in a string. If not found, return null. Assume the string is NOT sorted. 
 
 ###Math
 
@@ -107,6 +108,7 @@ Boring Problems and Solutions :)
 a) If the given key is not present in the tree than the Path Array is equal to “-1”
 b) If the given key is present in the BST, path array tells you the path (in terms of left & right direction) that you take from root to reach the given key. If you go towards right add “0” to the path array and if you go towards left add “1” to Path Array.
 16. [Expression Tree] - Implement a method that builds a binary tree given an infix expression like (7+3)*2. Write a second method to return the expression String given a binary tree. Write a third method that takes a postfix expression like 73+2* and returns a binary tree. Terms in the expression are separated by spaces.
+17. [Mirror Tree] - Write a method that takes a Binary Tree and returns a mirror image of that tree (i.e. all the left sides are on the right and vis versa). 
 
 ###Stacks
 1. Implement Stack - Push and Pop methods
