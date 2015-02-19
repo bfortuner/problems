@@ -109,6 +109,7 @@ a) If the given key is not present in the tree than the Path Array is equal to �
 b) If the given key is present in the BST, path array tells you the path (in terms of left & right direction) that you take from root to reach the given key. If you go towards right add “0” to the path array and if you go towards left add “1” to Path Array.
 16. [Expression Tree] - Implement a method that builds a binary tree given an infix expression like (7+3)*2. Write a second method to return the expression String given a binary tree. Write a third method that takes a postfix expression like 73+2* and returns a binary tree. Terms in the expression are separated by spaces.
 17. [Mirror Tree] - Write a method that takes a Binary Tree and returns a mirror image of that tree (i.e. all the left sides are on the right and vis versa). 
+18. [Max Weight Subtree] - Given a BinaryTree, write a method that returns the substree of maximum weight. Each node in the subtree carries an integer (+/-) value which represents that node's weight.
 
 ###Stacks
 1. Implement Stack - Push and Pop methods
@@ -131,3 +132,11 @@ b) If the given key is present in the BST, path array tells you the path (in ter
 3. DFS - Implement Recursive and Iterative versions of Depth-First Search, which visit and print out every Vertex in Graph
 4. Topological Sort - Implement Recursive (DFS) and Iterative versions of Topological Sort
 5. [Chess Moves] - Write a class that calculates the minimum number of moves required to move from point A to point B on a 10x10 chess board. Implement methods to handle moves for Rook, Queen, King, and Knight.
+6. [Amazon Locker] - Write a method to find the nearest Amazon locker, given a starting Vertex, which has methods getNeighbors() and isLocker(). The graph can be infinitely big, and you don't know the location of the amazon lockers. 
+
+
+###Design
+1. [Parking Lot] - Model an OOP design for an attendant-less parking lot. To start, walk through the entire customer experience, keeping track of each time software is required.
+
+
+*[Brackets] highlight questions that we were asked in an interview 

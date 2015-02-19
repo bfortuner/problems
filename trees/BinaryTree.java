@@ -1,13 +1,14 @@
 package trees;
 
 
-public class BinaryTree {
+public class BinaryTree<T> {
     BinaryTree parent;
     BinaryTree leftChild;
     BinaryTree rightChild;
-    String value;
+    T value;
+    int subtreeWeight;
 
-    public BinaryTree(String value) {
+    public BinaryTree(T value) {
 	this.value = value;
     }
     public BinaryTree getParent() {
@@ -16,10 +17,10 @@ public class BinaryTree {
     public void setParent(BinaryTree tree) {
         this.parent = tree;
     }
-    public String getValue() {
+    public T getValue() {
         return this.value;
     }
-    public void setValue(String val) {
+    public void setValue(T val) {
         this.value = val;
     }
     public void setLeftChild(BinaryTree child) {
@@ -35,6 +36,14 @@ public class BinaryTree {
     }
     public BinaryTree getRightChild() {
 	return this.rightChild;
+    }
+
+    public int getSubtreeWeight() {
+	return this.subtreeWeight;
+    }
+
+    public void setSubtreeWeight(int weight) {
+	this.subtreeWeight = weight;
     }
 
 }
