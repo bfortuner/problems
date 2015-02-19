@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.io.*;  //InputStream, InputStreamReader, BufferedReader
 import math.Counter;
+import java.util.*;
 
 public class Hello {
     
@@ -51,6 +52,8 @@ public class Hello {
 	System.out.println(c.count);
 
 	testGetListSublist();
+
+	testArrayEquality();
     }
 
     public static void changeStr(String s) {
@@ -97,5 +100,14 @@ public class Hello {
 	System.out.println(sublist.size() == 2);
     }
 
+    public static void testArrayEquality() {
+	System.out.println("Testing Array Equality -----");
+	int[] arr1 = {1,2,3};
+	int[] arr2 = {1,2,3};
+	System.out.println((arr1 == arr2) == false);
+	System.out.println(arr1.equals(arr2) == false);
+	System.out.println(Arrays.equals(arr1,arr2) == true);
+
+    }
 
 }
