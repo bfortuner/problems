@@ -1,9 +1,9 @@
 package lists;
 
 public class Node<T> {
-	Node next;
-	Node prior;
-	T value;
+	public Node next;
+	public Node prior;
+	public T value;
 
     public Node(T value) {
         this.value = value;
