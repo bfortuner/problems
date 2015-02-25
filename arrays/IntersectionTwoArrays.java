@@ -17,6 +17,7 @@ public class IntersectionTwoArrays {
 	System.out.println(Arrays.equals(answer,b3));
     }
 
+
     /*
      * Naive - O(n^2)
      */
@@ -32,7 +33,6 @@ public class IntersectionTwoArrays {
 	Integer[] arr = list.toArray(new Integer[list.size()]);	
 	return arr;
     }
-
     /*
      * Linear Search - O(n + m)
      */
@@ -56,6 +56,7 @@ public class IntersectionTwoArrays {
 	Integer[] arr = list.toArray(new Integer[list.size()]);	
 	return arr;
     }
+
 
     /*
      * Hash Map - O(n + m) Time, O(n) Space
