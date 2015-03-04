@@ -125,9 +125,10 @@ b) If the given key is present in the BST, path array tells you the path (in ter
 5. Sort Stack - Write a method to sort a stack in ascending order using Push, Pop, Peek, and IsEmpty.
 
 ###Queues
-1. Implement Queue - Enqueue and Dequeue methods
-2. Queue With Stacks - Implement a queue using 2 Stacks
-3. Queue With Linked List - Implement a queue using a circular linked list (no links are null and the value of last.next = first). Keep only one Node instance variable (last).
+1. Implement Queue w Linked List - Enqueue, Dequeue, Size methods.
+2. Implement Queue w Resizing Array - Enqueue, Dequeue, Size methods.
+3. Queue With Stacks - Implement a queue using 2 Stacks
+4. Queue With Linked List - Implement a queue using a circular linked list (no links are null and the value of last.next = first). Keep only one Node instance variable (last).
 
 ###Heaps
 1. Binary Heap - Implement a Binary Heap of integers with methods - isEmpty(), getSize(), getMin(), deleteMin(), buildBinaryTreeFromList(), insertElement()
