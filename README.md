@@ -83,6 +83,7 @@ Boring Problems and Solutions :)
 7. Find Intersection of Two lists - Given two lists, find the node at which they intersect and become one list
 8. Linked List Basics - Series of easy problems that cover linked lists    
 9. [Reverse Linked List] - Write Iterative and Recursive Solutions that reverse a linked list and return the new first node
+10. Clone Linked List - Clone a linked structure with two pointers per node. Suppose that you are given a reference to the first node of a linked structure where each node has two pointers: one pointer to the next node in the sequence and one pointer to an arbitrary node.
 
 ###Recursion
 
