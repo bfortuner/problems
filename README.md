@@ -118,6 +118,8 @@ b) If the given key is present in the BST, path array tells you the path (in ter
 16. [Expression Tree] - Implement a method that builds a binary tree given a postfix expression like 73+2*. Write a second method to return the postfix expression String given a binary tree. Write a third method that returns the Infix expression String. Terms in the input expression are separated by spaces.
 17. [Mirror Tree] - Write a method that takes a Binary Tree and returns a mirror image of that tree (i.e. all the left sides are on the right and vis versa). 
 18. [Max Weight Subtree] - Given a BinaryTree, write a method that returns the substree of maximum weight. Each node in the subtree carries an integer (+/-) value which represents that node's weight.
+19. Zig_Zag_Tree - Given a binary tree, return the zigzag level order traversal of its nodes' values. (ie, from left to right, then right to left for the next level and alternate between).
+
 
 ###Stacks
 1. Implement Stack - Push and Pop methods
