@@ -27,7 +27,7 @@ void printkdistanceNodeDown(node *root, int k, int distance)
  
     // Recur for left and right subtrees
     printkdistanceNodeDown(root->left, k, distance + 1);
-    printkdistanceNodeDown(root->right, distance + 1);
+    printkdistanceNodeDown(root->right, k, distance + 1);
 }
  
 // Prints all nodes at distance k from a given target node.
