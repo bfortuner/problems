@@ -13,21 +13,21 @@ struct node
  
 /* Recursive function to print all the nodes at distance k in the
    tree (or subtree) rooted with given root. See  */
-void printkdistanceNodeDown(node *root, int k)
+void printkdistanceNodeDown(node *root, int k, int distance)
 {
     // Base Case
-    if (root == NULL || k < 0)  return;
+    if (root == NULL)  return;
  
     // If we reach a k distant node, print it
-    if (k==0)
+    if (distance % k == 0)
     {
         cout << root->data << endl;
         return;
     }
  
     // Recur for left and right subtrees
-    printkdistanceNodeDown(root->left, k-1);
-    printkdistanceNodeDown(root->right, k-1);
+    printkdistanceNodeDown(root->left, k, distance + 1);
+    printkdistanceNodeDown(root->right, k, distance + 1);
 }
  
 // Prints all nodes at distance k from a given target node.
