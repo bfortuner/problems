@@ -78,9 +78,24 @@ class LinkedList:
 			node = node.get_next_node()
 		return False
 
+	def remove_cur_node(self, node):
+		if node == None:
+			return
+		while node.get_next_node() != None:
+			prior_node = node
+			next_node = node.get_next_node()
+			node.set_value(next_node.get_value())
+			node = next_node
+		prior_node.set_next_node(None)
+
+	def remove_node_after_cur_node(self, node):
+		#A --> B --> C --> None
+		if node == None or node.get_next_node() == None:
+			return
+		node.set_next_node(node.get_next_node().get_next_node())
 
 
-#remove_node_after_cur_node(Node node)
+
 #insert_value_after_node(Node node, String value)
 #remove_node_by_value(Node first, String value)
 #get_max_value_in_list_iterative(Node first)
@@ -117,6 +132,22 @@ def get_test_linked_list():
 
 
 # Tests
+
+def test_remove_node_after_cur_node():
+	l4 = build_ll_from_lst(["A","B","C"])
+	node = l4.get_first_node().get_next_node()
+	l4.remove_node_after_cur_node(node)
+
+	a4 = build_ll_from_lst(["A","B"])
+	assert l4.lists_eq(a4)
+
+def test_remove_cur_node():
+	l4 = build_ll_from_lst(["A","B","C"])
+	node = l4.get_first_node().get_next_node()
+	l4.remove_cur_node(node)
+
+	a4 = build_ll_from_lst(["A","C"])
+	assert l4.lists_eq(a4)
 
 def test_build_ll_from_lst():
 	lst1 = []
@@ -264,4 +295,6 @@ test_deleted_kth_node__one_element()
 test_deleted_kth_node__three_elements()
 test_build_ll_from_lst()
 test_contains_value()
+test_remove_cur_node()
+test_remove_node_after_cur_node()
 print "LinkedList tests complete!"
