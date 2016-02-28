@@ -89,49 +89,43 @@ class LinkedList:
 		prior_node.set_next_node(None)
 
 	def remove_node_after_cur_node(self, node):
-		#A --> B --> C --> None
 		if node == None or node.get_next_node() == None:
 			return
 		node.set_next_node(node.get_next_node().get_next_node())
 
-
-
-#insert_value_after_node(Node node, String value)
-#remove_node_by_value(Node first, String value)
-#get_max_value_in_list_iterative(Node first)
-#get_max_value_in_list_recursive(Node first)
-
-
-
-
-## Helpers
-
-def build_ll_from_lst(lst):
-	ll = LinkedList()
-	if len(lst) == 0:
-		return ll
-	ll.set_first_node(Node(lst[0]))
-	node = ll.get_first_node()
-	i = 1
-	while i < len(lst):
-		new_node = Node(lst[i])
+	def insert_val_after_node(self, node, val):
+		new_node = Node(val)
+		new_node.set_next_node(node.get_next_node())
 		node.set_next_node(new_node)
-		node = new_node
-		i += 1
-	return ll
 
-def get_test_linked_list():
-	third_node = Node("C")
-	second_node = Node("B", third_node)
-	first_node = Node("A", second_node)
-
-	test_list = LinkedList(first_node)
-	return test_list
-
+	def remove_node_by_value(self, val):
+		node = self.get_first_node()
+		if node == None:
+			return
+		while node != None and node.get_value() != val:
+			prior_node = node
+			node = node.get_next_node()
+		if node != None:
+			prior_node.set_next_node(node.get_next_node())
 
 
 
 # Tests
+
+def test_remove_node_by_value():
+	l1 = build_ll_from_lst(["A","B","C"])
+	l1.remove_node_by_value("B")
+
+	a1 = build_ll_from_lst(["A","C"])
+	assert l1.lists_eq(a1)
+
+def test_insert_val_after_node():
+	l1 = build_ll_from_lst(["A","C"])
+	node = l1.get_first_node()
+	l1.insert_val_after_node(node,"B")
+
+	a1 = build_ll_from_lst(["A","B","C"])
+	assert l1.lists_eq(a1)
 
 def test_remove_node_after_cur_node():
 	l4 = build_ll_from_lst(["A","B","C"])
@@ -280,21 +274,49 @@ def test_get_linked_list_str():
 	assert list_str == "A->B->C->"
 
 
-#Run all Tests
-print "LinkedList tests starting!"
-test_build_linked_list()
-test_get_linked_list_str()
-test_remove_last_node()
-test_lists_eq__same_object()
-test_lists_eq__other_not_instance_of_linked_list()
-test_lists_eq__one_node()
-test_lists_eq__lists_empty()
-test_get_size()
-test_deleted_kth_node__empty_list()
-test_deleted_kth_node__one_element()
-test_deleted_kth_node__three_elements()
-test_build_ll_from_lst()
-test_contains_value()
-test_remove_cur_node()
-test_remove_node_after_cur_node()
-print "LinkedList tests complete!"
+## Helpers
+
+def build_ll_from_lst(lst):
+	ll = LinkedList()
+	if len(lst) == 0:
+		return ll
+	ll.set_first_node(Node(lst[0]))
+	node = ll.get_first_node()
+	i = 1
+	while i < len(lst):
+		new_node = Node(lst[i])
+		node.set_next_node(new_node)
+		node = new_node
+		i += 1
+	return ll
+
+def get_test_linked_list():
+	third_node = Node("C")
+	second_node = Node("B", third_node)
+	first_node = Node("A", second_node)
+
+	test_list = LinkedList(first_node)
+	return test_list
+
+
+if __name__ == "__main__":
+	#Run all Tests
+	print "LinkedList tests starting!"
+	test_build_linked_list()
+	test_get_linked_list_str()
+	test_remove_last_node()
+	test_lists_eq__same_object()
+	test_lists_eq__other_not_instance_of_linked_list()
+	test_lists_eq__one_node()
+	test_lists_eq__lists_empty()
+	test_get_size()
+	test_deleted_kth_node__empty_list()
+	test_deleted_kth_node__one_element()
+	test_deleted_kth_node__three_elements()
+	test_build_ll_from_lst()
+	test_contains_value()
+	test_remove_cur_node()
+	test_remove_node_after_cur_node()
+	test_insert_val_after_node()
+	test_remove_node_by_value()
+	print "LinkedList tests complete!"
