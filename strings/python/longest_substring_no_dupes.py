@@ -2,61 +2,55 @@
 Longest Substring No Dupes
 Given a string, please get the length of the longest substring 
 which does not have duplicated characters. 
-Supposing all characters in the string are in the range from ‘a’ to ‘z’. 
+Supposing all characters in the string are in the range from 'a' to 'z'. 
 Input: "ababc", Output: 3.
 """
 
 #Cases
 """
-1) Empty or None 
-3) Single word
-4) Periods and special characters?
-5) Normal sentence w spaces as delimeter
+1) Empty or None
+2) Single char
+3) Normal string (whole is unique)
+4) Normal string (part is unique - beginning/end)
 """
 
 #Approaches
 """
-1) Split string into Array delimited by space. Create new string. 
-Loop through array backwards and append to new string delimited by space.
-2) New String. Loop through Original String until first space found. Keep track
-of index and append substring every time space is found.
+1) Store cur_length, max_length, cur_index, setofchars. Loop through O(n^2) use set to 
+know dupes. Keep track of longest substring without dupes. Reset if dupe found.
 """
 
-def reverse_sentence_array(str1):
-	if str1 == "" or str1 == None:
-		return ""
-	sentence_array = str1.split(" ")
-	i = len(sentence_array)-1
-	reversed_sentence = ""
-	while i >= 0:
-		if sentence_array[i] != "":
-			reversed_sentence += sentence_array[i] + " "
-		i -= 1
-	return reversed_sentence.rstrip()
+def get_len_longest_substr(str1):
+	#hashmap which stores unique chars in string
+	#Once dupe is found, we clear hashmap and start again
+	cur_substr_chars = set()
+	max_length = 0
+	start_index = 0
+	i = 0
+	while i < len(str1):
+		if str1[i] not in cur_substr_chars:
+			cur_substr_chars.add(str1[i])
+			if i-start_index+1 > max_length:
+				max_length = i-start_index+1
+			i += 1
+		else:
+			cur_substr_chars = set()
+			start_index += 1
+			i = start_index
+	return max_length
 
 
 #Tests
 
-s1 = "I am a student"
-s2 = ""
-s3 = "AAA"
-s4 = " AAA "
-s5 = "BB     BB"
-
-a1 = "student a am I"
-a2 = ""
-a3 = "AAA"
-a4 = "AAA"
-a5 = "BB BB"
-
-
-def test_reverse_sentence_array():
-	assert reverse_sentence_array(s1) == a1
-	assert reverse_sentence_array(s2) == a2
-	assert reverse_sentence_array(s3) == a3
-	assert reverse_sentence_array(s4) == a4
-	assert reverse_sentence_array(s5) == a5
+def test_get_len_longest_substr():
+	assert get_len_longest_substr("abcadd") == 4
+	assert get_len_longest_substr("abcabc") == 3
+	assert get_len_longest_substr("aaa") == 1
+	assert get_len_longest_substr("abcad") == 4
+	assert get_len_longest_substr("a") == 1
+	assert get_len_longest_substr("") == 0
+	assert get_len_longest_substr("abc") == 3
 
 if __name__ == "__main__":
-	test_reverse_sentence_array()
+	test_get_len_longest_substr()
 
