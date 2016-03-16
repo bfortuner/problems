@@ -98,6 +98,7 @@ Boring Problems and Solutions :)
 8. Paint Fill - Implement the "paint fill" function one might see on an image editing program. Given a 2 dimensional matrix array of Colors, fill in the surrounding area until you hit a border or another filled-in square.
 
 ###Trees
+
 1. Count Nodes at k distance - Given a binary tree, print the nodes k distance away from a target node
 2. Implement Tree - That stores integers and has methods getParent(), setParent(), getChildren(), addChild(), removeChild(), getValue(), setValue()
 3. Implement BinaryTree - That stores Strings with methods setParent, setValue, setLeftChild, setRightChild
@@ -120,8 +121,8 @@ b) If the given key is present in the BST, path array tells you the path (in ter
 18. [Max Weight Subtree] - Given a BinaryTree, write a method that returns the substree of maximum weight. Each node in the subtree carries an integer (+/-) value which represents that node's weight.
 19. Zig_Zag_Tree - Given a binary tree, return the zigzag level order traversal of its nodes' values. (ie, from left to right, then right to left for the next level and alternate between).
 
-
 ###Stacks
+
 1. Implement Stack - Push and Pop methods
 2. Single Array - Implement 3 stacks using a single array
 3. Set of Stacks - Consider a Stack of plates. If one stack gets too high, create a new stack of plates. Implement a special stack that holds these multiple stacks. When the first stack passes some threshold, the class creates a new stack and continues. Implement both Push and Pop methods.
@@ -131,16 +132,19 @@ b) If the given key is present in the BST, path array tells you the path (in ter
 7. Stack With Max - Create a data structure that efficiently supports the stack operations (push and pop) and also a return-the-maximum operation. Assume the elements are reals numbers so that you can compare them.
 
 ###Queues
+
 1. Implement Queue w Linked List - Enqueue, Dequeue, Size methods.
 2. Implement Queue w Resizing Array - Enqueue, Dequeue, Size methods.
 3. Queue With Stacks - Implement a queue using 2 Stacks
 4. Queue With Linked List - Implement a queue using a circular linked list (no links are null and the value of last.next = first). Keep only one Node instance variable (last).
 
 ###Heaps
+
 1. Binary Heap - Implement a Binary Heap of integers with methods - isEmpty(), getSize(), getMin(), deleteMin(), buildBinaryTreeFromList(), insertElement()
 2. Binary Heap in CPP - ""
 
 ###Graphs
+
 1. Implement a Directed Graph using the Adjacent List technique
 2. BFS - Find the Vertex in a Graph that holds the key "E" using Breadth First Search.
 3. DFS - Implement Recursive and Iterative versions of Depth-First Search, which visit and print out every Vertex in Graph
@@ -150,6 +154,7 @@ b) If the given key is present in the BST, path array tells you the path (in ter
 
 
 ###Design
+
 1. [Parking Lot] - Model an OOP design for an attendant-less parking lot. To start, walk through the entire customer experience, keeping track of each time software is required.
 
 
