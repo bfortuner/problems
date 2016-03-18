@@ -1,3 +1,5 @@
+from entry import Entry
+
 """
 Implement Hashmap w Get, Put, and Remove operations
 
@@ -8,21 +10,13 @@ Questions:
 
 """
 
-
-#Open Addressing - Write a HashTable class that uses "linear probing" to resolve collisions (methods Get, Put, Remove)
-
-#Hashmap entry?
-# STart with naive assuming no collisions and overriding everything
-
-class Entry:
-	def __init__(self, key, value):
-		self.key = key
-		self.value = value
-
 class HashMap:
+	"""
+	Naive implementation assuming no collisions
+	"""
 	def __init__(self, size):
 		self.size = size
-		self.buckets = [None for x in range(size)]  #need fixed size actually
+		self.buckets = [None for x in range(size)]  #need fixed size
 
 	def put(self, key, value):
 		entry = Entry(key, value)
