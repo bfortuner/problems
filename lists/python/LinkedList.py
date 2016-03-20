@@ -14,7 +14,7 @@ class LinkedList:
 		linked_list_str = ""
 		cur_node = self.first_node
 		while cur_node is not None:
-			linked_list_str = linked_list_str + cur_node.get_value() + "->"
+			linked_list_str = linked_list_str + str(cur_node.get_value()) + "->"
 			cur_node = cur_node.get_next_node()
 		return linked_list_str
 
@@ -107,6 +107,36 @@ class LinkedList:
 			node = node.get_next_node()
 		if node != None:
 			prior_node.set_next_node(node.get_next_node())
+
+	def append(self, val):
+		"""
+		Add value to end of list
+		"""
+		if self.first_node is None:
+			self.first_node = Node(val)
+			return
+		cur_node = self.first_node
+		while cur_node.next_node is not None:
+			cur_node = cur_node.next_node
+		cur_node.next_node = Node(val)
+
+	def insert_nth(self, val, position):
+		"""
+		Insert value at position N in list
+		pos = 0 == first_node
+		"""
+		if self.first_node is None or position == 0:
+		    self.first_node = Node(val, self.first_node)
+		    return
+		i = 1
+		prior_node = self.first_node
+		cur_node = self.first_node.next_node
+		while i < position:
+		    prior_node = cur_node
+		    cur_node = cur_node.next_node
+		    i+=1
+		new_node = Node(val, cur_node)
+		prior_node.next_node = new_node
 
 
 
@@ -273,6 +303,27 @@ def test_get_linked_list_str():
 	list_str = test_list.get_linked_list_str()
 	assert list_str == "A->B->C->"
 
+def test_append():
+	inputlist = build_ll_from_lst([1,2,3])
+	answerlist = build_ll_from_lst([1,2,3,4])
+	inputlist.append(4)
+	assert answerlist.lists_eq(inputlist)
+
+	inputlist = build_ll_from_lst([])
+	answerlist = build_ll_from_lst([4])
+	inputlist.append(4)
+	assert answerlist.lists_eq(inputlist)
+
+def test_insert_nth():
+	inputlist = build_ll_from_lst([1,2,4])
+	answerlist = build_ll_from_lst([1,2,3,4])
+	inputlist.insert_nth(3,2)
+	assert answerlist.lists_eq(inputlist)
+
+	inputlist = build_ll_from_lst([1,2,4])
+	answerlist = build_ll_from_lst([0,1,2,4])
+	inputlist.insert_nth(0,0)
+	assert answerlist.lists_eq(inputlist)
 
 ## Helpers
 
@@ -319,4 +370,6 @@ if __name__ == "__main__":
 	test_remove_node_after_cur_node()
 	test_insert_val_after_node()
 	test_remove_node_by_value()
+	test_append()
+	test_insert_nth()
 	print "LinkedList tests complete!"
