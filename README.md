@@ -85,6 +85,7 @@ Boring Problems and Solutions :)
 8. Linked List Basics - Series of easy problems that cover linked lists    
 9. [Reverse Linked List] - Write Iterative and Recursive Solutions that reverse a linked list and return the new first node
 10. Clone Linked List - Clone a linked structure with two pointers per node. Suppose that you are given a reference to the first node of a linked structure where each node has two pointers: one pointer to the next node in the sequence and one pointer to an arbitrary node.
+11. Compare Two Lists - You’re given the pointer to the head nodes of two linked lists. Compare the data in the nodes of the linked lists to check if they are equal. The lists are equal only if they have the same number of nodes and corresponding nodes contain the same data. Write Recursive and Iterative solutions. 
 
 ###Recursion
 
