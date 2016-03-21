@@ -1,30 +1,30 @@
 from Node import Node
 
 class LinkedList:
-	def __init__(self, first_node=None):
-		self.first_node = first_node
+	def __init__(self, head=None):
+		self.head = head
 
-	def set_first_node(self, new_first_node):
-		self.first_node = new_first_node
+	def set_head(self, new_head):
+		self.head = new_head
 
-	def get_first_node(self):
-		return self.first_node
+	def get_head(self):
+		return self.head
 
 	def get_linked_list_str(self):
 		linked_list_str = ""
-		cur_node = self.first_node
+		cur_node = self.head
 		while cur_node is not None:
-			linked_list_str = linked_list_str + str(cur_node.get_value()) + "->"
-			cur_node = cur_node.get_next_node()
+			linked_list_str = linked_list_str + str(cur_node.value) + "->"
+			cur_node = cur_node.get_next()
 		return linked_list_str
 
 	def remove_last_node(self):
-		node = self.first_node
-		if node.get_next_node() == None:
+		node = self.head
+		if node.get_next() == None:
 			return
-		while node.get_next_node().get_next_node() is not None:
-			node = node.get_next_node()
-		node.set_next_node(None)
+		while node.get_next().get_next() is not None:
+			node = node.get_next()
+		node.set_next(None)
 
 	def lists_eq(self, other_list):
 		'''
@@ -35,92 +35,92 @@ class LinkedList:
 			return True
 		if not isinstance(other_list, LinkedList):
 			return False
-		node = self.get_first_node()
-		other_node = other_list.get_first_node()
+		node = self.head
+		other_node = other_list.head
 		while node is not None:
 			if other_node is None:
 				return False
-			elif other_node.get_value() != node.get_value():
+			elif other_node.value != node.value:
 				return False
-			node = node.get_next_node()
-			other_node = other_node.get_next_node()
+			node = node.get_next()
+			other_node = other_node.get_next()
 		return other_node is None
 
 	def get_size(self):
 		size = 0
-		node = self.first_node
+		node = self.head
 		while node is not None:
 			size += 1
-			node = node.get_next_node()
+			node = node.get_next()
 		return size
 
 	def contains_value(self, value):
-		node = self.get_first_node()
+		node = self.head
 		while node is not None:
-			if node.get_value() == value:
+			if node.value == value:
 				return True
-			node = node.get_next_node()
+			node = node.get_next()
 		return False
 
 	def remove_cur_node(self, node):
 		if node == None:
 			return
-		while node.get_next_node() != None:
+		while node.get_next() != None:
 			prior_node = node
-			next_node = node.get_next_node()
-			node.set_value(next_node.get_value())
-			node = next_node
-		prior_node.set_next_node(None)
+			next = node.get_next()
+			node.set_value(next.value)
+			node = next
+		prior_node.set_next(None)
 
 	def remove_node_after_cur_node(self, node):
-		if node == None or node.get_next_node() == None:
+		if node == None or node.get_next() == None:
 			return
-		node.set_next_node(node.get_next_node().get_next_node())
+		node.set_next(node.get_next().get_next())
 
 	def insert_val_after_node(self, node, val):
 		new_node = Node(val)
-		new_node.set_next_node(node.get_next_node())
-		node.set_next_node(new_node)
+		new_node.set_next(node.get_next())
+		node.set_next(new_node)
 
 	def remove_node_by_value(self, val):
-		node = self.get_first_node()
+		node = self.head
 		if node == None:
 			return
-		while node != None and node.get_value() != val:
+		while node != None and node.value != val:
 			prior_node = node
-			node = node.get_next_node()
+			node = node.get_next()
 		if node != None:
-			prior_node.set_next_node(node.get_next_node())
+			prior_node.set_next(node.get_next())
 
 	def append(self, val):
 		"""
 		Add value to end of list
 		"""
-		if self.first_node is None:
-			self.first_node = Node(val)
+		if self.head is None:
+			self.head = Node(val)
 			return
-		cur_node = self.first_node
-		while cur_node.next_node is not None:
-			cur_node = cur_node.next_node
-		cur_node.next_node = Node(val)
+		cur_node = self.head
+		while cur_node.next is not None:
+			cur_node = cur_node.next
+		cur_node.next = Node(val)
 
 	def insert_nth(self, val, position):
 		"""
 		Insert value at position N in list
-		pos = 0 == first_node
+		pos = 0 == head
 		"""
-		if self.first_node is None or position == 0:
-		    self.first_node = Node(val, self.first_node)
+		if self.head is None or position == 0:
+		    self.head = Node(val, self.head)
 		    return
 		i = 1
-		prior_node = self.first_node
-		cur_node = self.first_node.next_node
+		prior_node = self.head
+		cur_node = self.head.next
 		while i < position:
 		    prior_node = cur_node
-		    cur_node = cur_node.next_node
+		    cur_node = cur_node.next
 		    i+=1
 		new_node = Node(val, cur_node)
-		prior_node.next_node = new_node
+		prior_node.next = new_node
 
 
 
@@ -135,7 +135,7 @@ def test_remove_node_by_value():
 
 def test_insert_val_after_node():
 	l1 = build_ll_from_lst(["A","C"])
-	node = l1.get_first_node()
+	node = l1.head
 	l1.insert_val_after_node(node,"B")
 
 	a1 = build_ll_from_lst(["A","B","C"])
@@ -143,7 +143,7 @@ def test_insert_val_after_node():
 
 def test_remove_node_after_cur_node():
 	l4 = build_ll_from_lst(["A","B","C"])
-	node = l4.get_first_node().get_next_node()
+	node = l4.head.get_next()
 	l4.remove_node_after_cur_node(node)
 
 	a4 = build_ll_from_lst(["A","B"])
@@ -151,7 +151,7 @@ def test_remove_node_after_cur_node():
 
 def test_remove_cur_node():
 	l4 = build_ll_from_lst(["A","B","C"])
-	node = l4.get_first_node().get_next_node()
+	node = l4.head.get_next()
 	l4.remove_cur_node(node)
 
 	a4 = build_ll_from_lst(["A","C"])
@@ -165,7 +165,7 @@ def test_build_ll_from_lst():
 	ll1 = LinkedList()
 	ll2 = LinkedList(Node("A"))
 	ll3 = LinkedList(Node("A"))
-	ll3.get_first_node().set_next_node(Node("B"))
+	ll3.head.set_next(Node("B"))
 
 	assert ll1.lists_eq(build_ll_from_lst(lst1))
 	assert ll2.lists_eq(build_ll_from_lst(lst2))
@@ -194,8 +194,8 @@ def test_remove_last_node():
 	#A -- > B -- > None
 	test_list = get_test_linked_list()
 	second_node = Node("B")
-	first_node = Node("A", second_node)
-	answer_list = LinkedList(first_node)
+	head = Node("A", second_node)
+	answer_list = LinkedList(head)
 
 	test_list.remove_last_node()
 	assert(test_list.lists_eq(answer_list))
@@ -229,29 +229,29 @@ def test_lists_eq__lists_empty():
 	assert test_list.lists_eq(other_list)
 
 	node = Node("A")
-	test_list.set_first_node(node)
+	test_list.set_head(node)
 	assert not test_list.lists_eq(other_list)
 	assert not other_list.lists_eq(test_list)
 
 def test_build_linked_list():
 	test_list = get_test_linked_list()
-	new_first_node = Node("Z")
-	new_first_node.set_next_node(test_list.get_first_node())
-	test_list.set_first_node(new_first_node)
+	new_head = Node("Z")
+	new_head.set_next(test_list.head)
+	test_list.set_head(new_head)
 
-	cur_node = test_list.get_first_node()
-	assert cur_node.get_value() == "Z"
+	cur_node = test_list.head
+	assert cur_node.value == "Z"
 
-	cur_node = cur_node.get_next_node()
-	assert cur_node.get_value() == "A"
+	cur_node = cur_node.get_next()
+	assert cur_node.value == "A"
 
-	cur_node = cur_node.get_next_node()
-	assert cur_node.get_value() == "B"
+	cur_node = cur_node.get_next()
+	assert cur_node.value == "B"
 
-	cur_node = cur_node.get_next_node()
-	assert cur_node.get_value() == "C"
+	cur_node = cur_node.get_next()
+	assert cur_node.value == "C"
 
-	cur_node = cur_node.get_next_node()
+	cur_node = cur_node.get_next()
 	assert cur_node is None
 
 def test_get_linked_list_str():
@@ -287,12 +287,12 @@ def build_ll_from_lst(lst):
 	ll = LinkedList()
 	if len(lst) == 0:
 		return ll
-	ll.set_first_node(Node(lst[0]))
-	node = ll.get_first_node()
+	ll.set_head(Node(lst[0]))
+	node = ll.head
 	i = 1
 	while i < len(lst):
 		new_node = Node(lst[i])
-		node.set_next_node(new_node)
+		node.set_next(new_node)
 		node = new_node
 		i += 1
 	return ll
@@ -300,9 +300,9 @@ def build_ll_from_lst(lst):
 def get_test_linked_list():
 	third_node = Node("C")
 	second_node = Node("B", third_node)
-	first_node = Node("A", second_node)
+	head = Node("A", second_node)
 
-	test_list = LinkedList(first_node)
+	test_list = LinkedList(head)
 	return test_list
 
 

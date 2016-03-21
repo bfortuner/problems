@@ -3,19 +3,19 @@ from Node import Node
 from LinkedList import LinkedList, build_ll_from_lst
 
 def get_max_value_in_list_iterative(node):
-	max_val = node.get_value()
+	max_val = node.value
 	while node != None:
-		if node.get_value() > max_val:
-			max_val = node.get_value()
-		node = node.get_next_node()
+		if node.value > max_val:
+			max_val = node.value
+		node = node.get_next()
 	return max_val
 
 def get_max_value_in_list_recursive(node):
 	if node == None:
 		return -sys.maxint
 	else:
-		return max(node.get_value(), get_max_value_in_list_recursive(
-			node.get_next_node()))
+		return max(node.value, get_max_value_in_list_recursive(
+			node.get_next()))
 
 def get_nth_node_from_tail(node, pos_from_tail):
 	"""
@@ -30,7 +30,7 @@ def get_nth_node_from_tail(node, pos_from_tail):
 	vals_list = []
 	while node is not None:
 		vals_list.append(node.value)
-		node = node.next_node
+		node = node.next
 	return vals_list[len(vals_list) - pos_from_tail - 1]
 
 
@@ -39,33 +39,33 @@ def get_nth_node_from_tail(node, pos_from_tail):
 
 def test_get_max_value_in_list_iterative():
 	l1 = build_ll_from_lst([1,2,3])
-	node = l1.get_first_node()
+	node = l1.head
 	assert get_max_value_in_list_iterative(node) == 3
 
 	l1 = build_ll_from_lst([1])
-	node = l1.get_first_node()
+	node = l1.head
 	assert get_max_value_in_list_iterative(node) == 1
 
 	l1 = build_ll_from_lst([1,3])
-	node = l1.get_first_node().get_next_node()
+	node = l1.head.get_next()
 	assert get_max_value_in_list_iterative(node) == 3
 
 def test_get_max_value_in_list_recursive():
 	l1 = build_ll_from_lst([1,2,3])
-	node = l1.get_first_node()
+	node = l1.head
 	assert get_max_value_in_list_recursive(node) == 3
 
 	l1 = build_ll_from_lst([1])
-	node = l1.get_first_node()
+	node = l1.head
 	assert get_max_value_in_list_recursive(node) == 1
 
 	l1 = build_ll_from_lst([1,3])
-	node = l1.get_first_node().get_next_node()
+	node = l1.head.get_next()
 	assert get_max_value_in_list_recursive(node) == 3
 
 def test_get_nth_node_from_tail():
 	l1 = build_ll_from_lst([1,2,3])
-	node = l1.get_first_node()
+	node = l1.head
 	assert get_nth_node_from_tail(node,0) == 3
 	assert get_nth_node_from_tail(node,1) == 2
 	assert get_nth_node_from_tail(node,2) == 1

@@ -7,10 +7,10 @@ from Node import Node
 def remove_duplicates_sorted(head):
 	start = head
 	while head is not None:
-		while head.next_node is not None and \
-		head.value == head.next_node.value:
-			head.next_node = head.next_node.next_node
-		head = head.next_node
+		while head.next is not None and \
+		head.value == head.next.value:
+			head.next = head.next.next
+		head = head.next
 	return LinkedList(start)
 
 def remove_duplicates_unsorted(head):
@@ -19,14 +19,14 @@ def remove_duplicates_unsorted(head):
 	hashmap = {}
 	hashmap[head.value] = 1
 	prior = head
-	cur = head.next_node
+	cur = head.next
 	while cur is not None:
 		if hashmap.get(cur.value) is not None:
-			prior.next_node = cur.next_node
+			prior.next = cur.next
 		else:
 			hashmap[cur.value] = 1
 			prior = cur
-		cur = cur.next_node
+		cur = cur.next
 	return LinkedList(head)
 
 
@@ -44,10 +44,10 @@ def test_remove_duplicates_sorted():
 	a3 = build_ll_from_lst([2,3,4,6])
 	a4 = build_ll_from_lst([10])
 
-	assert remove_duplicates_sorted(l1.first_node).lists_eq(a1)
-	assert remove_duplicates_sorted(l2.first_node).lists_eq(a2)
-	assert remove_duplicates_sorted(l3.first_node).lists_eq(a3)
-	assert remove_duplicates_sorted(l4.first_node).lists_eq(a4)
+	assert remove_duplicates_sorted(l1.head).lists_eq(a1)
+	assert remove_duplicates_sorted(l2.head).lists_eq(a2)
+	assert remove_duplicates_sorted(l3.head).lists_eq(a3)
+	assert remove_duplicates_sorted(l4.head).lists_eq(a4)
 
 def test_remove_duplicates_unsorted():
 	l1 = build_ll_from_lst([1,2,4,2,1,3,7,3,4])
@@ -60,10 +60,10 @@ def test_remove_duplicates_unsorted():
 	a3 = build_ll_from_lst([6,2,4,3])
 	a4 = build_ll_from_lst([10])
 
-	assert remove_duplicates_unsorted(l1.first_node).lists_eq(a1)
-	assert remove_duplicates_unsorted(l2.first_node).lists_eq(a2)
-	assert remove_duplicates_unsorted(l3.first_node).lists_eq(a3)
-	assert remove_duplicates_unsorted(l4.first_node).lists_eq(a4)
+	assert remove_duplicates_unsorted(l1.head).lists_eq(a1)
+	assert remove_duplicates_unsorted(l2.head).lists_eq(a2)
+	assert remove_duplicates_unsorted(l3.head).lists_eq(a3)
+	assert remove_duplicates_unsorted(l4.head).lists_eq(a4)
 
 if __name__ == "__main__":
 	test_remove_duplicates_sorted()

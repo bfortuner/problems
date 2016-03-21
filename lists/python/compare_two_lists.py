@@ -14,14 +14,14 @@ def compare_lists_recursive(headA, headB):
         return False
     elif headA.value != headB.value:
         return False
-    return compare_lists_recursive(headA.next_node, headB.next_node)
+    return compare_lists_recursive(headA.next, headB.next)
 
 def compare_lists_iterative(headA, headB):
 	while headA is not None:
 		if headB is None or headB.value != headA.value:
 			return False
-		headA = headA.next_node
-		headB = headB.next_node
+		headA = headA.next
+		headB = headB.next
 	return headB is None
 
 
@@ -31,27 +31,27 @@ def compare_lists_iterative(headA, headB):
 def test_compare_lists_recursive():
 	llA = build_ll_from_lst([2,4])
 	llB = build_ll_from_lst([2,4])
-	headA = llA.first_node
-	headB = llB.first_node
+	headA = llA.head
+	headB = llB.head
 	assert compare_lists_recursive(headA, headB)
 
 	llA = build_ll_from_lst([2])
 	llB = build_ll_from_lst([2,4])
-	headA = llA.first_node
-	headB = llB.first_node
+	headA = llA.head
+	headB = llB.head
 	assert not compare_lists_recursive(headA, headB)
 
 def test_compare_lists_iterative():
 	llA = build_ll_from_lst([2,4])
 	llB = build_ll_from_lst([2,4])
-	headA = llA.first_node
-	headB = llB.first_node
+	headA = llA.head
+	headB = llB.head
 	assert compare_lists_iterative(headA, headB)
 
 	llA = build_ll_from_lst([2])
 	llB = build_ll_from_lst([2,4])
-	headA = llA.first_node
-	headB = llB.first_node
+	headA = llA.head
+	headB = llB.head
 	assert not compare_lists_iterative(headA, headB)
 
 
