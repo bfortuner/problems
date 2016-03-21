@@ -104,24 +104,6 @@ class LinkedList:
 			cur_node = cur_node.next
 		cur_node.next = Node(val)
 
-	def insert_nth(self, val, position):
-		"""
-		Insert value at position N in list
-		pos = 0 == head
-		"""
-		if self.head is None or position == 0:
-		    self.head = Node(val, self.head)
-		    return
-		i = 1
-		prior_node = self.head
-		cur_node = self.head.next
-		while i < position:
-		    prior_node = cur_node
-		    cur_node = cur_node.next
-		    i+=1
-		new_node = Node(val, cur_node)
-		prior_node.next = new_node
-
 
 
 # Tests
@@ -270,16 +252,7 @@ def test_append():
 	inputlist.append(4)
 	assert answerlist.lists_eq(inputlist)
 
-def test_insert_nth():
-	inputlist = build_ll_from_lst([1,2,4])
-	answerlist = build_ll_from_lst([1,2,3,4])
-	inputlist.insert_nth(3,2)
-	assert answerlist.lists_eq(inputlist)
 
-	inputlist = build_ll_from_lst([1,2,4])
-	answerlist = build_ll_from_lst([0,1,2,4])
-	inputlist.insert_nth(0,0)
-	assert answerlist.lists_eq(inputlist)
 
 ## Helpers
 
@@ -324,5 +297,4 @@ if __name__ == "__main__":
 	test_insert_val_after_node()
 	test_remove_node_by_value()
 	test_append()
-	test_insert_nth()
 	print "LinkedList tests complete!"
