@@ -2,6 +2,11 @@ from LinkedList import LinkedList
 from LinkedList import build_ll_from_lst
 from Node import Node
 
+"""
+Return True if Each Lists Contains 
+The Same Values in the Same Order
+"""
+
 def compare_lists_recursive(headA, headB):
     if headA == None and headB == None:
         return True

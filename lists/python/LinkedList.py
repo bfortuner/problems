@@ -54,22 +54,6 @@ class LinkedList:
 			node = node.get_next_node()
 		return size
 
-	def delete_kth_node(self, k):
-		'''Delete 0th node means 1st node'''
-		# A --> B --> C --> None
-		i = 0
-		node = self.get_first_node()
-		if node is None:
-			return
-		if k == 0:
-			self.set_first_node(node.get_next_node())
-		while i < k-1 and node.get_next_node() is not None:
-			node = node.get_next_node()
-			i += 1
-		if node.get_next_node() is not None:
-			new_next_node = node.get_next_node().get_next_node()
-			node.set_next_node(new_next_node)
-
 	def contains_value(self, value):
 		node = self.get_first_node()
 		while node is not None:
@@ -197,34 +181,6 @@ def test_contains_value():
 	assert l2.contains_value("B") == False
 	assert l3.contains_value("B") == True
 	assert l3.contains_value("C") == False
-
-def test_deleted_kth_node__empty_list():
-	# None -->
-	empty_list = LinkedList()
-	empty_list.delete_kth_node(3)
-	assert empty_list.get_first_node() is None
-
-def test_deleted_kth_node__one_element():
-	# A --> None
-	first_node = Node("A")
-	test_list = LinkedList(first_node)
-	test_list.delete_kth_node(1)
-	assert test_list.get_first_node() == first_node
-
-	test_list.delete_kth_node(3)
-	assert test_list.get_first_node() == first_node
-
-	test_list.delete_kth_node(0)
-	assert test_list.get_first_node() == None	
-
-def test_deleted_kth_node__three_elements():
-	# A --> B --> C --> None
-	test_list = get_test_linked_list()
-	test_list.delete_kth_node(4)
-	test_list.delete_kth_node(3)
-	test_list.delete_kth_node(1)
-	test_list.delete_kth_node(0)
-	assert test_list.get_first_node().get_value() == "C"
 
 def test_get_size():
 	test_list = get_test_linked_list()
@@ -361,9 +317,6 @@ if __name__ == "__main__":
 	test_lists_eq__one_node()
 	test_lists_eq__lists_empty()
 	test_get_size()
-	test_deleted_kth_node__empty_list()
-	test_deleted_kth_node__one_element()
-	test_deleted_kth_node__three_elements()
 	test_build_ll_from_lst()
 	test_contains_value()
 	test_remove_cur_node()

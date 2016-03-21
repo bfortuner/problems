@@ -76,16 +76,17 @@ Boring Problems and Solutions :)
 ###Linked Lists
 
 1. Double Linked List - Implement a Doubly Linked List
-2. Remove Duplicates - Remove duplicates from an unsorted Single Linked List
+2. Remove Duplicates - Remove duplicates from both sorted and unsorted Singly Linked List
 3. Delete Node - Delete node in middle of Single Linked List given access to only that node
 4. [Is Circular] - Return true if single linked list is circular (corrupted)
 5. Circular Node - Find the first node in a circular single linked list
-6. Sum Two Lists - Add two numbers together. Each number's digits are stored in a Single Linked List in reverse order (e.g. 134 == 4 --> 3 --> 1) ** also done in c++ ** 
+6. Sum Two Lists - Add two numbers together. Each number's digits are stored in a Single Linked List in reverse order (e.g. 134 == 4 --> 3 --> 1)
 7. Find Intersection of Two lists - Given two lists, find the node at which they intersect and become one list
 8. Linked List Basics - Series of easy problems that cover linked lists    
 9. [Reverse Linked List] - Write Iterative and Recursive Solutions that reverse a linked list and return the new first node
 10. Clone Linked List - Clone a linked structure with two pointers per node. Suppose that you are given a reference to the first node of a linked structure where each node has two pointers: one pointer to the next node in the sequence and one pointer to an arbitrary node.
-11. Compare Two Lists - You’re given the pointer to the head nodes of two linked lists. Compare the data in the nodes of the linked lists to check if they are equal. The lists are equal only if they have the same number of nodes and corresponding nodes contain the same data. Write Recursive and Iterative solutions. 
+11. Compare Two Lists - You’re given the pointer to the head nodes of two linked lists. Compare the data in the nodes of the linked lists to check if they are equal. The lists are equal only if they have the same number of nodes and corresponding nodes contain the same data. Write Recursive and Iterative solutions.
+12. Delete Kth Node in LinkedList - Given a linked list and the position of a node to delete. Delete the node at the given position and return the head node.
 
 ###Recursion
 
