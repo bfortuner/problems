@@ -41,6 +41,4 @@ def test_get_set_node():
 	assert next.get_next() is None
 
 if __name__ == "__main__":
-	print "Node tests starting!"
 	test_get_set_node() 
-	print "Node tests complete!"
