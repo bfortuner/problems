@@ -14,12 +14,12 @@ Where a previous node will be visited twice
 
 1 --> 2
   <--
-
+    
 1 --> 2 --> 3
 ^           |
 |           |
  -----------     
-
+  
 1 --> 2 --> 3 --> 4
       ^           |
       |           |
@@ -39,7 +39,7 @@ def has_cycle_hashmap(head):
 def has_cycle_runners(head):
 	"""
 	1) Fast runner, head.next.next
-	2) Slow runnerm head.next
+	2) Slow runner, head.next
 	3) Keep going until Fast running gets to None
 	OR 
 	4) Fast Runner gets to Slow Runner
@@ -52,6 +52,52 @@ def has_cycle_runners(head):
 		if slow == fast:
 			return True
 	return False
+
+def get_first_node_in_cycle(head):
+	"""
+	Assumes there WILL be a cycle (no None)
+	return first node in cycle
+	"""
+	slow = head.next
+	fast = head.next.next
+	while fast != slow:
+		slow = slow.next
+		fast = fast.next.next
+
+	pos = 0
+	slow = head
+	while slow != fast:
+		slow = slow.next
+		fast = fast.next
+		pos += 1
+	return pos
+
+def find_length_of_cycle(head):
+	"""
+	Assumes there WILL be a cycle (no None)
+	return first node in cycle
+	"""
+	#Confirm Loop
+	slow = head.next
+	fast = head.next.next
+	while fast != slow:
+		slow = slow.next
+		fast = fast.next.next
+
+	#Find the Start of Cyclce
+	slow = head
+	while slow != fast:
+		slow = slow.next
+		fast = fast.next
+
+	#Get Length of Cycle
+	length = 0
+	fast = fast.next
+	while fast != slow:
+		fast = fast.next
+		length += 1
+	return length
+
 
 
 #Tests
@@ -107,7 +153,21 @@ def test_has_cycle_runners():
 	assert has_cycle_runners(circle_list1.head) == True
 	assert has_cycle_runners(circle_list2.head) == True
 
+def test_get_first_node_in_cycle():
+	circle_list1 = get_test_circular_ll_1()
+	circle_list2 = get_test_circular_ll_2()
+	assert get_first_node_in_cycle(circle_list1.head) == 0
+	assert get_first_node_in_cycle(circle_list2.head) == 1
+
+def test_find_length_of_cycle():
+	circle_list1 = get_test_circular_ll_1()
+	circle_list2 = get_test_circular_ll_2()
+	assert find_length_of_cycle(circle_list1.head) == 2
+	assert find_length_of_cycle(circle_list2.head) == 2
+
 if __name__ == "__main__":
 	test_has_cycle_hashmap()
 	test_has_cycle_runners()
+	test_get_first_node_in_cycle()
+	test_find_length_of_cycle()
 

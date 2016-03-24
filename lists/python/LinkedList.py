@@ -1,4 +1,5 @@
 from Node import Node
+from DoublyNode import DoublyNode
 
 class LinkedList:
 	def __init__(self, head=None):
@@ -77,8 +78,7 @@ class LinkedList:
 			return
 		node.set_next(node.get_next().get_next())
 
-	def insert_val_after_node(self, node, val):
-		new_node = Node(val)
+	def insert_after_node(self, node, new_node):
 		new_node.set_next(node.get_next())
 		node.set_next(new_node)
 
@@ -115,10 +115,10 @@ def test_remove_node_by_value():
 	a1 = build_ll_from_lst(["A","C"])
 	assert l1.lists_eq(a1)
 
-def test_insert_val_after_node():
+def test_insert_after_node():
 	l1 = build_ll_from_lst(["A","C"])
 	node = l1.head
-	l1.insert_val_after_node(node,"B")
+	l1.insert_after_node(node,Node("B"))
 
 	a1 = build_ll_from_lst(["A","B","C"])
 	assert l1.lists_eq(a1)
@@ -270,6 +270,21 @@ def build_ll_from_lst(lst):
 		i += 1
 	return ll
 
+def build_doubly_ll_from_lst(lst):
+	ll = LinkedList()
+	if len(lst) == 0:
+		return ll
+	ll.set_head(DoublyNode(lst[0]))
+	node = ll.head
+	i = 1
+	while i < len(lst):
+		new_node = DoublyNode(lst[i])
+		new_node.prev = node
+		node.next = new_node
+		node = new_node
+		i += 1
+	return ll
+
 def get_test_linked_list():
 	third_node = Node("C")
 	second_node = Node("B", third_node)
@@ -294,7 +309,7 @@ if __name__ == "__main__":
 	test_contains_value()
 	test_remove_cur_node()
 	test_remove_node_after_cur_node()
-	test_insert_val_after_node()
+	test_insert_after_node()
 	test_remove_node_by_value()
 	test_append()
 	print "LinkedList tests complete!"
