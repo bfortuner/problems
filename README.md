@@ -87,6 +87,8 @@ Boring Problems and Solutions :)
 10. Clone Linked List - Clone a linked structure with two pointers per node. Suppose that you are given a reference to the first node of a linked structure where each node has two pointers: one pointer to the next node in the sequence and one pointer to an arbitrary node.
 11. Compare Two Lists - You’re given the pointer to the head nodes of two linked lists. Compare the data in the nodes of the linked lists to check if they are equal. The lists are equal only if they have the same number of nodes and corresponding nodes contain the same data. Write Recursive and Iterative solutions.
 12. Delete Kth Node in LinkedList - Given a linked list and the position of a node to delete. Delete the node at the given position and return the head node.
+13. Reverse Doubly Linked List
+14. Insert Node Into Doubly Linked List
 
 ###Recursion
 
@@ -153,7 +155,6 @@ b) If the given key is present in the BST, path array tells you the path (in ter
 4. Topological Sort - Implement Recursive (DFS) and Iterative versions of Topological Sort
 5. [Chess Moves] - Write a class that calculates the minimum number of moves required to move from point A to point B on a 10x10 chess board. Implement methods to handle moves for Rook, Queen, King, and Knight.
 6. [Amazon Locker] - Write a method to find the nearest Amazon locker, given a starting Vertex, which has methods getNeighbors() and isLocker(). The graph can be infinitely big, and you don't know the location of the amazon lockers. 
-
 
 ###Design
 
