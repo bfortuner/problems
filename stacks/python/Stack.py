@@ -60,6 +60,19 @@ class Stack(object):
 			return self.head.value
 		return None
 
+	def equals(self, stack2):
+		stack1 = self
+		if stack1 is stack2:
+			return True
+		if stack2 is None:
+			return False
+
+		while not stack1.is_empty():
+			if stack2.is_empty():
+				return False
+			if stack1.pop() != stack2.pop():
+				return False
+		return True
 
 
 # Tests
