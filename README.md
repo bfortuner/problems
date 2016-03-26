@@ -4,6 +4,7 @@ boring-stuff
 Boring Problems and Solutions :)
 
 ##Resources
+- https://www.hackerrank.com
 - http://beust.com/algorithms.pdf
 - http://www.codewars.com/dashboard
 - http://www.geeksforgeeks.org/
@@ -78,7 +79,7 @@ Boring Problems and Solutions :)
 1. Double Linked List - Implement a Doubly Linked List
 2. Remove Duplicates - Remove duplicates from both sorted and unsorted Singly Linked List
 3. Delete Node - Delete node in middle of Single Linked List given access to only that node
-4. [Is Circular] - Return true if single linked list is circular (corrupted)
+4. [Is Circular] - Return true if single linked list is circular (corrupted). Go on to find the first node in the loop. Go on to find the size of the loop.
 5. Circular Node - Find the first node in a circular single linked list
 6. Sum Two Lists - Add two numbers together. Each number's digits are stored in a Single Linked List in reverse order (e.g. 134 == 4 --> 3 --> 1)
 7. Find Intersection of Two lists - Given two lists, find the node at which they intersect and become one list
@@ -127,7 +128,7 @@ b) If the given key is present in the BST, path array tells you the path (in ter
 
 ###Stacks
 
-1. Implement Stack - Push and Pop methods
+1. Implement Stack - Push and Pop methods (with Linked List or Array)
 2. Single Array - Implement 3 stacks using a single array
 3. Set of Stacks - Consider a Stack of plates. If one stack gets too high, create a new stack of plates. Implement a special stack that holds these multiple stacks. When the first stack passes some threshold, the class creates a new stack and continues. Implement both Push and Pop methods.
 4. Towers of Hanoi - 
