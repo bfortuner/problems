@@ -6,6 +6,11 @@ Implement Stack - Push and Pop methods
 Assumptions:
 1) Stack cannot handle None values
 
+*A python list has properties of a stack (don't need Stack)
+-Append operation is like a push (adds to end)
+-Pop operations is just like a pop
+-len(list) returns size
+
 """
 
 class Stack(object):
@@ -47,9 +52,23 @@ class Stack(object):
 			node = node.next
 		return count
 
+	def is_empty(self):
+		return self.head is None
+
+	def peek(self):
+		if self.head:
+			return self.head.value
+		return None
+
 
 
 # Tests
+
+def build_stack_from_list(lst):
+	stack = Stack()
+	for val in lst:
+		stack.push(val)
+	return stack
 
 def test_basic_ops():
 	stack = Stack()
@@ -79,14 +98,27 @@ def test_size():
 	stack.pop()
 	assert stack.size() == 0
 
-def build_stack_from_list(lst):
+def test_is_empty():
 	stack = Stack()
-	for val in lst:
-		stack.push(val)
-	return stack
+	assert stack.is_empty() == True
+	stack.push(1)
+	assert stack.is_empty() == False
+	stack.pop()
+	assert stack.is_empty() == True	
 
-	
+def test_peek():
+	stack = Stack()
+	assert stack.peek() == None
+	stack.push(1)
+	assert stack.peek() == 1
+	stack.push(2)
+	assert stack.peek() == 2
+	assert stack.peek() == 2
+	stack.pop()
+	assert stack.peek() == 1	
 
 if __name__ == "__main__":
 	test_basic_ops()
 	test_size()
+	test_is_empty()
+	test_peek()
