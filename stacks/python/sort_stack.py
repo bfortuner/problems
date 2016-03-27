@@ -49,11 +49,11 @@ def test_sort_stack():
 	assert answerstack.equals(outputstack) == True
 
 def test_sort_stack_big():
-	inputstack = build_stack_from_list([3,6,2,9,10,4,1])
+	inputstack = build_stack_from_list([3,6,2,9,10,4,1,-4,6])
 	outputstack = sort_stack(inputstack)
 	outputstack.display()
 
-	answerstack = build_stack_from_list([10,9,6,4,3,2,1])
+	answerstack = build_stack_from_list([10,9,6,6,4,3,2,1,-4])
 	assert answerstack.equals(outputstack) == True
 
 def test_sort_stack_1_element():
