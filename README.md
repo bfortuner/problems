@@ -141,7 +141,7 @@ b) If the given key is present in the BST, path array tells you the path (in ter
 1. Implement Queue w Linked List - Enqueue, Dequeue, Size methods.
 2. Implement Queue w Resizing Array - Enqueue, Dequeue, Size methods.
 3. Queue With Stacks - Implement a queue using 2 Stacks
-4. Queue With Linked List - Implement a queue using a circular linked list (no links are null and the value of last.next = first). Keep only one Node instance variable (last).
+4. Queue With Circular Linked List - Implement a queue using a circular linked list (no links are null and the value of last.next = first). Keep only one Node instance variable (last).
 
 ###Heaps
 
