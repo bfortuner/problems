@@ -58,6 +58,7 @@ Boring Problems and Solutions :)
 7. [FindFirstUniqueChar] - Return the first non-repeated character in a string. If not found, return null. Assume the string is NOT sorted. 
 8. ReverseWords - Given a sentence, return the sentence in reverse order. (e.g. "I am a student" == "student a am I")
 9. Longest Substring No Dupes - Given a string, please get the length of the longest substring which does not have duplicated characters. Supposing all characters in the string are in the range from ‘a’ to ‘z’. Input: "ababc", Output: 3.
+10. CSV Parser - Write Method that takes a string representing a CSV and returns a useful JSON data structure.
 
 ###Math
 
@@ -156,6 +157,7 @@ b) If the given key is present in the BST, path array tells you the path (in ter
 4. Topological Sort - Implement Recursive (DFS) and Iterative versions of Topological Sort
 5. [Chess Moves] - Write a class that calculates the minimum number of moves required to move from point A to point B on a 10x10 chess board. Implement methods to handle moves for Rook, Queen, King, and Knight.
 6. [Amazon Locker] - Write a method to find the nearest Amazon locker, given a starting Vertex, which has methods getNeighbors() and isLocker(). The graph can be infinitely big, and you don't know the location of the amazon lockers. 
+7. Implement a Graph and Vertex
 
 ###Design
 
