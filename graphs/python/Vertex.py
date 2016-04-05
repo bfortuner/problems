@@ -1,13 +1,13 @@
 
 class Vertex(object):
 	"""
-	Simpe Vertex Implementation which stores its value
+	Simple Vertex Implementation which stores its value
 	and its neighboring Vertices
 	"""
 
-	def __init__(self, value=None, neighbors=[]):
+	def __init__(self, value=None, neighbors=None):
 		self.value = value
-		self.neighbors = neighbors #List of Vertex objects
+		self.neighbors = neighbors if neighbors is not None else []
 
 	def add_neighbor(self, neighbor):
 		"""
@@ -16,9 +16,6 @@ class Vertex(object):
 		self.neighbors.append(neighbor)
 
 	def add_neighbors(self, neighbors):
-		"""
-		Input: List of Vertex objs to add to neighbors list
-		"""
 		self.neighbors.extend(neighbors)
 
 	def remove_neighbor(self, neighbor):
@@ -54,10 +51,9 @@ def test_basic_ops():
 	assert copy is vertex 
 	assert copy == vertex
 	assert vertex.id() == copy.id()
-
 	print vertex
 
-def test_add_remove_neighbors():
+def test_add_remove_neighbor():
 	vertex = Vertex("A")
 	assert len(vertex.neighbors) == 0
 	
@@ -72,6 +68,25 @@ def test_add_remove_neighbors():
 	assert vertex.remove_neighbor(vertex2) == None
 	assert len(vertex.neighbors) == 0
 
+def test_add_neighbors():
+	vertex1 = Vertex("A")
+	vertex2 = Vertex("B")
+	vertex3 = Vertex("C")
+
+	vertex1.add_neighbors([vertex2,vertex3])
+	assert len(vertex1.neighbors) == 2
+	assert len(vertex2.neighbors) == 0
+	assert len(vertex3.neighbors) == 0
+
+	vertex4 = Vertex("F")
+	assert len(vertex4.neighbors) == 0
+
+	vertex2.add_neighbors([vertex1, vertex4, vertex3])
+	assert len(vertex2.neighbors) == 3
+	assert len(vertex1.neighbors) == 2
+	assert len(vertex3.neighbors) == 0
+
 if __name__ == "__main__":
 	test_basic_ops()
-	test_add_remove_neighbors()
+	test_add_remove_neighbor()
+	test_add_neighbors()

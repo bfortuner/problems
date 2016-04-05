@@ -31,13 +31,13 @@ def build_test_graph():
 	v3 = Vertex("C")
 	v4 = Vertex("D")
 	v5 = Vertex("E")
-	
-	v1.add_neighbors([v2])
+
+	v1.add_neighbor(v2)
 	v2.add_neighbors([v3,v5])
 	v3.add_neighbors([v2,v4,v5])
 	v4.add_neighbors([v1,v3])
 	v5.add_neighbors([v2])
-
+	
 	return Graph([v1,v2,v3,v4,v5])
 
 
