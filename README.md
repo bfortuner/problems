@@ -155,8 +155,7 @@ b) If the given key is present in the BST, path array tells you the path (in ter
 21. Iterative InOrder Traversal - Implement in-order traversal of tree iteratively.
 22. Max Path Sum - find the max sum of a path in a binary search tree.
 23. Find Predecessor/Find Successor - implment functions to find predecessor and successor in BST
-24. Invert Tree- WAF to invert a tree. ex 4 	3  2
-										 3 2  ->  4
+24. Invert Tree- WAF to invert a tree. 
 25. Delete Node - WAF to delete node from a tree.
 26. Common Ancestor - Given two nodes in a binary tree, implement a function that returns the closet common ancestor of both nodes in the tree.
 
