@@ -64,6 +64,7 @@ Example: Length of transformation: 5 (includes starting and ending words)
 Example: [1,5,2,3,4] Sol = 5 or 4. An element is a peak because it's neighbors are less than it.
 11. [Sets all Equal] -WAF that takes an array of "sets" of String objects, and determines if they are equal. Each "set" in the input array is represented as an array of String objects, in 
 no particular order, and possibly containing duplicates. Nevertheless, when determining whether two of these "sets" are equivalent, you should disregard order and duplicates. For example, the sets represented by these arrays are all equivalent: {"a", "b"}{"b", "a"}{"a", "b", "a"}
+12 [Find Celebrity] - Party of n people. Only one person is known to everyone at the party. This "Celebrity" may or may not be in attendence. Celebrity knows no one at the party. Given an array of unique numbers and a function HaveAquaintance(A,B) which returns true if A knows B. Find the celebrity in a minimum number of questions. 
 
 
 
