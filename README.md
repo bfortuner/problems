@@ -5,6 +5,7 @@ Boring Problems and Solutions :)
 
 ##Resources
 - https://www.hackerrank.com
+- https://leetcode.com/
 - http://beust.com/algorithms.pdf
 - http://www.codewars.com/dashboard
 - http://www.geeksforgeeks.org/
@@ -34,6 +35,19 @@ Boring Problems and Solutions :)
 1. Binary Search - Write method to return True if integer is in array
 2. Binary Search w Pivot - An element in a sorted array can be found in O(log n) time via binary search. But suppose I rotate the sorted array at some pivot unknown to you beforehand. So for instance, 1 2 3 4 5 might become 3 4 5 1 2. Devise a way to find an element in the rotated array in O(log n) time. If not found, return -1.
 3. Bitonic Array - An array is bitonic if it is comprised of an increasing sequence of integers followed immediately by a decreasing sequence of integers. Write a program that, given a bitonic array of N distinct integer values, determines whether a given integer is in the array. Given 3LogN and 2LogN solutions.
+4. Count Paths - Give a 2d array of size nxm with elements 1 and 0, find the number of paths from location [0,0] to [n-1,m-1] where a 1 indicates a open space and 0 indicates a closed space.
+[1,0,0,1]
+[1,1,1,0] = 4 paths
+[0,1,1,0]
+[0,1,1,1]
+5. [Word Ladder] - Given a starting word, ending word and wordset. Find length of shortest transformation path from begin Word to end Word. 
+Note: All words lowercase and alphabetical chars only. All words have same length. 
+Rules: 1. change only 1 char at a time. 2. intermediate word must be in wordset.
+ex. 
+beginWord = "hit", endWord = "cog"
+wordSet = ["hot","dot","dog","lot","log"] 
+Example: Length of transformation: 5 (includes starting and ending words)
+"hit" -> "hot" -> "dot" or "lot" -> "dog" or "log" -> "cog"
 
 ###Arrays
 
@@ -46,8 +60,13 @@ Boring Problems and Solutions :)
 7. [Platforms Train Station] - Given arrival and departure times of all trains that reach a railway station, find the minimum number of platforms required for the railway station so that no train waits. We are given two arrays which represent arrival and departure times of trains that stop. Input:  arr[]  = {9:00,  9:40, 9:50,  11:00, 15:00, 18:00}, dep[]  = {9:10, 12:00, 11:20, 11:30, 19:00, 20:00}, Output: 3. There are at-most three trains at a time (time between 11:00 to 11:20)
 8. Max Incremental Subsequence - Given an array of unsorted integers, return the largest incremental subsequence (i.e. a sub array where elements are sorted in ascending order). Input: {0,1,2,3,4,2}. Output:{2,3,4}.
 9. [Intersection Two Arrays] - Given two unsorted integer arrays, return a 3rd array with the intersection (distinct elements that appear in both arrays). Optimize for time and space complexity.
-10. [Distinct Elements 2 Arrays] - Given 2 arrays, return array of numbers that exist in array 1 but not in array 2. Provide a solution in linear (2n is possible) time.
-11. [Largest Connected Group] - Given 2D array of X/-, find the size of the largest connected group of X's
+10. Find Peak - Implement a function taht returns a local max in an array in O(log(n))
+Example: [1,5,2,3,4] Sol = 5 or 4. An element is a peak because it's neighbors are less than it.
+11. [Sets all Equal] - WAF that takes an array of "sets" of String objects, and determines if they are equal. Each "set" in the input array is represented as an array of String objects, in 
+no particular order, and possibly containing duplicates. Nevertheless, when determining whether two of these "sets" are equivalent, you should disregard order and duplicates. For example, the sets represented by these arrays are all equivalent: {"a", "b"}{"b", "a"}{"a", "b", "a"}
+12 [Find Celebrity] - Party of n people. Only one person is known to everyone at the party. This "Celebrity" may or may not be in attendence. Celebrity knows no one at the party. Given an array of unique numbers and a function HaveAquaintance(A,B) which returns true if A knows B. Find the celebrity in a minimum number of questions. 
+13. [Distinct Elements 2 Arrays] - Given 2 arrays, return array of numbers that exist in array 1 but not in array 2. Provide a solution in linear (2n is possible) time.
+14. [Largest Connected Group] - Given 2D array of X/-, find the size of the largest connected group of X's
 	x x - -
 	x - - -
 	x - - x
@@ -65,6 +84,7 @@ Boring Problems and Solutions :)
 8. ReverseWords - Given a sentence, return the sentence in reverse order. (e.g. "I am a student" == "student a am I")
 9. Longest Substring No Dupes - Given a string, please get the length of the longest substring which does not have duplicated characters. Supposing all characters in the string are in the range from ‘a’ to ‘z’. Input: "ababc", Output: 3.
 10. CSV Parser - Write Method that takes a string representing a CSV and returns a useful JSON data structure.
+11. Expand it! - Given a String in format "a2c2b5" where a character is followed by an integer of number of times repeated, expand the string. ex: "a2c2b5" sol = "aaccbbbbb"
 
 ###Math
 
@@ -73,7 +93,8 @@ Boring Problems and Solutions :)
 3. [Sum Two Arrays] - Write method to sum 2 arrays and return a new array. Arrays can be of different lengths. e.g. [1,3] + [1,0,0] == [1,1,3]
 4. Smallest Number > k - Write method to find the smallest number which is greater than a given number k and has SAME SET OF DIGITS as given number
 5. [Find Missing Integer] - Given an array of sorted consecutive integers, return the missing integer (or -1 if no integer is missing). E.g. [3,4,6,7] == 4. Complete solutions in both O(n) and O(log n) time. Follow-up: write a method that handles an unsorted array of integers between 0 and N in O(N) time. e.g. [3,5,7,4] == 6 
-6. [P99 Website Latency] - Given an unsorted array of floats between 0 and 1, representing website latency times, return the 99th percentile time (the time that is greater than 99% of other times). This is an important metric in software development to identify worst case issues for users. Follow-up: Instead of an array, assume you are receiving an infinite stream of latency times and can't store them all. Create a Class to return the P99 at any given moment (methods void putTime(double time), double getP99()). Follow-up: Update your methods to handle variable percentiles (60th, 85th) and latency ranges (3 - 7 seconds).  
+6. [P99 Website Latency] - Given an unsorted array of floats between 0 and 1, representing website latency times, return the 99th percentile time (the time that is greater than 99% of other times). This is an important metric in software development to identify worst case issues for users. Follow-up: Instead of an array, assume you are receiving an infinite stream of latency times and can't store them all. Create a Class to return the P99 at any given moment (methods void putTime(double time), double getP99()). Follow-up: Update your methods to handle variable percentiles (60th, 85th) and latency ranges (3 - 7 seconds). 
+7. Multiply -  Implement multiplication of two numbers without using * operator
 
 ###Hash Tables
 
@@ -97,6 +118,8 @@ Boring Problems and Solutions :)
 12. Delete Kth Node in LinkedList - Given a linked list and the position of a node to delete. Delete the node at the given position and return the head node.
 13. Reverse Doubly Linked List
 14. Insert Node Into Doubly Linked List
+15. Merge Lists - Given 2 sorted lists, merge them into one list.
+
 
 ###Recursion
 
@@ -132,6 +155,14 @@ b) If the given key is present in the BST, path array tells you the path (in ter
 17. [Mirror Tree] - Write a method that takes a Binary Tree and returns a mirror image of that tree (i.e. all the left sides are on the right and vis versa). 
 18. [Max Weight Subtree] - Given a BinaryTree, write a method that returns the substree of maximum weight. Each node in the subtree carries an integer (+/-) value which represents that node's weight.
 19. Zig_Zag_Tree - Given a binary tree, return the zigzag level order traversal of its nodes' values. (ie, from left to right, then right to left for the next level and alternate between).
+20. Binary Search Tree to LL- Convert a binary search tree to a linked list.
+21. Iterative InOrder Traversal - Implement in-order traversal of tree iteratively.
+22. Max Path Sum - find the max sum of a path in a binary search tree.
+23. Find Predecessor/Find Successor - implment functions to find predecessor and successor in BST
+24. Invert Tree- WAF to invert a tree. 
+25. Delete Node - WAF to delete node from a tree.
+26. Common Ancestor - Given two nodes in a binary tree, implement a function that returns the closet common ancestor of both nodes in the tree.
+
 
 ###Stacks
 
@@ -166,9 +197,15 @@ b) If the given key is present in the BST, path array tells you the path (in ter
 7. Implement a Graph and Vertex
 8. Pretty Print - Starting with a single Vertex, implement a method that prints out a string representation of a Graph that resembles a visual web 
 
+###Sets
+
+1. [Implement Set] - Implement hash function, add, contains methods and constructor methods.
+
 ###Design
 
 1. [Parking Lot] - Model an OOP design for an attendant-less parking lot. To start, walk through the entire customer experience, keeping track of each time software is required.
+
+
 
 
 *[Brackets] highlight questions that we were asked in an interview 
