@@ -8,6 +8,7 @@ class Vertex(object):
 	def __init__(self, value=None, neighbors=None):
 		self.value = value
 		self.neighbors = neighbors if neighbors is not None else []
+		self.status = "NOT_VISITED"
 
 	def add_neighbor(self, neighbor):
 		"""

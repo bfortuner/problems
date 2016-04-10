@@ -2,7 +2,21 @@ from Graph import Graph
 from Graph import build_test_graph
 from Vertex import Vertex
 
-def bfs(vertex, value):
+"""
+Pretty Print
+
+Starting with a single Vertex, implement a method that prints out a 
+string representation of a Graph that resembles a visual web 
+
+Approach:
+1) Using BFS, extract all unique vertices from the graph into set
+2) Loop through vertices, plot each vertex into a arbitrary coordinates in matrix
+3) Rearrange vertices in matrix until correctly positions
+4) Pass matrix into format string method to print output 
+
+"""
+
+def extract_vertices(vertex):
 	"""
 	Input: starting Vertex, value to find
 	Output: return closest Vertex that contains value
@@ -14,18 +28,21 @@ def bfs(vertex, value):
 	neighbors.append(vertex)
 	while len(neighbors) > 0:
 		vertex = neighbors.pop(0)
-		if vertex.value == value:
-			return vertex
 		for neighbor in vertex.neighbors:
 			if neighbor not in visited:
 				neighbors.append(neighbor)
 				visited.add(neighbor)
-	return None
+	return visited
+
+def plot_to_array(vertices):
+	return []
+
+def pretty_print(vertices_arr=[]):
+	print vertices_arr
 
 
 
-
-def test_bfs():
+def test_pretty_print():
 	graph = build_test_graph()
 	graph.pretty_print()
 
@@ -36,15 +53,9 @@ def test_bfs():
 	v4 = vertices[3] #D
 	v5 = vertices[4] #E
 
-	assert bfs(v1,"B") == v2
-	assert bfs(v1,"C") == v3
-	assert bfs(v1,"D") == v4
-	assert bfs(v1,"E") == v5
-
-	assert bfs(v2,"A") == v1
-	assert bfs(v3,"A") == v1
-	assert bfs(v3,"E") == v5
+	vertices_set = extract_vertices(graph.vertices[0])
+	print vertices_set
 
 if __name__ == "__main__":
-	test_bfs()
+	test_pretty_print()
 

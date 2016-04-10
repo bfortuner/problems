@@ -46,6 +46,12 @@ Boring Problems and Solutions :)
 7. [Platforms Train Station] - Given arrival and departure times of all trains that reach a railway station, find the minimum number of platforms required for the railway station so that no train waits. We are given two arrays which represent arrival and departure times of trains that stop. Input:  arr[]  = {9:00,  9:40, 9:50,  11:00, 15:00, 18:00}, dep[]  = {9:10, 12:00, 11:20, 11:30, 19:00, 20:00}, Output: 3. There are at-most three trains at a time (time between 11:00 to 11:20)
 8. Max Incremental Subsequence - Given an array of unsorted integers, return the largest incremental subsequence (i.e. a sub array where elements are sorted in ascending order). Input: {0,1,2,3,4,2}. Output:{2,3,4}.
 9. [Intersection Two Arrays] - Given two unsorted integer arrays, return a 3rd array with the intersection (distinct elements that appear in both arrays). Optimize for time and space complexity.
+10. [Distinct Elements 2 Arrays] - Given 2 arrays, return array of numbers that exist in array 1 but not in array 2. Provide a solution in linear (2n is possible) time.
+11. [Largest Connected Group] - Given 2D array of X/-, find the size of the largest connected group of X's
+	x x - -
+	x - - -
+	x - - x
+	- - x -
 
 ###Strings
 
@@ -158,6 +164,7 @@ b) If the given key is present in the BST, path array tells you the path (in ter
 5. [Chess Moves] - Write a class that calculates the minimum number of moves required to move from point A to point B on a 10x10 chess board. Implement methods to handle moves for Rook, Queen, King, and Knight.
 6. [Amazon Locker] - Write a method to find the nearest Amazon locker, given a starting Vertex, which has methods getNeighbors() and isLocker(). The graph can be infinitely big, and you don't know the location of the amazon lockers. 
 7. Implement a Graph and Vertex
+8. Pretty Print - Starting with a single Vertex, implement a method that prints out a string representation of a Graph that resembles a visual web 
 
 ###Design
 
