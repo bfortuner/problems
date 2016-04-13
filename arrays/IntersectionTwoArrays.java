@@ -34,7 +34,8 @@ public class IntersectionTwoArrays {
 	return arr;
     }
     /*
-     * Linear Search - O(n + m)
+     * Linear Search - O(n + m) + O(n log n) to sort
+     * works if they are sorted first!
      */
     public Integer[] getIntersection2(int[] a1, int[] a2) {
 	List<Integer> list = new ArrayList();
