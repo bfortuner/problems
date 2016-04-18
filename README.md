@@ -62,11 +62,16 @@ Example: Length of transformation: 5 (includes starting and ending words)
 9. [Intersection Two Arrays] - Given two unsorted integer arrays, return a 3rd array with the intersection (distinct elements that appear in both arrays). Optimize for time and space complexity.
 10. Find Peak - Implement a function taht returns a local max in an array in O(log(n))
 Example: [1,5,2,3,4] Sol = 5 or 4. An element is a peak because it's neighbors are less than it.
-11. [Sets all Equal] -WAF that takes an array of "sets" of String objects, and determines if they are equal. Each "set" in the input array is represented as an array of String objects, in 
+11. [Sets all Equal] - WAF that takes an array of "sets" of String objects, and determines if they are equal. Each "set" in the input array is represented as an array of String objects, in 
 no particular order, and possibly containing duplicates. Nevertheless, when determining whether two of these "sets" are equivalent, you should disregard order and duplicates. For example, the sets represented by these arrays are all equivalent: {"a", "b"}{"b", "a"}{"a", "b", "a"}
 12. [Find Celebrity] - Party of n people. Only one person is known to everyone at the party. This "Celebrity" may or may not be in attendence. Celebrity knows no one at the party. Given an array of unique numbers and a function HaveAquaintance(A,B) which returns true if A knows B. Find the celebrity in a minimum number of questions. 
+13. [Distinct Elements 2 Arrays] - Given 2 arrays, return array of numbers that exist in array 1 but not in array 2. Provide a solution in linear (2n is possible) time.
+14. [Largest Connected Group] - Given 2D array of X/-, find the size of the largest connected group of X's
+	x x - -
+	x - - -
+	x - - x
+	- - x -
 13. [Find Max Difference] - The maximum difference for a pair of elements in some array a is defined as the largest difference between any a[i] and a[j] where i < j and a[i] < a[j]. Return -1 if the array is in decending order or no such number exists. ex. a = {2, 3, 10, 2, 4, 8, 1} Output: 8. (10-2 = 8)
-
 
 
 
@@ -83,7 +88,6 @@ no particular order, and possibly containing duplicates. Nevertheless, when dete
 9. Longest Substring No Dupes - Given a string, please get the length of the longest substring which does not have duplicated characters. Supposing all characters in the string are in the range from ‘a’ to ‘z’. Input: "ababc", Output: 3.
 10. CSV Parser - Write Method that takes a string representing a CSV and returns a useful JSON data structure.
 11. Expand it! - Given a String in format "a2c2b5" where a character is followed by an integer of number of times repeated, expand the string. ex: "a2c2b5" sol = "aaccbbbbb"
-12.
 
 ###Math
 
@@ -194,6 +198,7 @@ b) If the given key is present in the BST, path array tells you the path (in ter
 5. [Chess Moves] - Write a class that calculates the minimum number of moves required to move from point A to point B on a 10x10 chess board. Implement methods to handle moves for Rook, Queen, King, and Knight.
 6. [Amazon Locker] - Write a method to find the nearest Amazon locker, given a starting Vertex, which has methods getNeighbors() and isLocker(). The graph can be infinitely big, and you don't know the location of the amazon lockers. 
 7. Implement a Graph and Vertex
+8. Pretty Print - Starting with a single Vertex, implement a method that prints out a string representation of a Graph that resembles a visual web 
 
 ###Sets
 
