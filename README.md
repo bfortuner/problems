@@ -14,6 +14,8 @@ Boring Problems and Solutions :)
 - http://codepad.org
 - http://crazyforcode.com
 - http://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+- http://www.interviewbit.com
+- http://www.hiredintech.com/app/
 
 ##Problems
 
