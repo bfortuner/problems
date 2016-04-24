@@ -25,7 +25,7 @@ def insertion_sort_w_hop(arr, start, hop):
 	i = start
 	while i < len(arr):
 		j = i
-		while j-hop >= 0 and arr[j] < arr[j-hop]:
+		while j-hop >= start and arr[j] < arr[j-hop]:
 			cur = arr[j]
 			arr[j] = arr[j-hop]
 			arr[j-hop] = cur
