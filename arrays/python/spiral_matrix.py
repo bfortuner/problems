@@ -58,13 +58,6 @@ def get_next_tile(tile, cur_dir, visited):
 
 	return next_tile
 
-"""
-2 4 6 8
-5 9 12 16
-2 11 5 9
-3 2 1 8
-"""
-
 def print_spiral(matrix):
 	visited = copy_matrix(matrix)
 	tile = Tile(0,0)
@@ -82,6 +75,46 @@ def print_spiral(matrix):
 		else:
 			tile = None
 
+
+
+
+def print_spiral_simple(matrix):
+	result = []
+	cur_dir = "R"
+	T = 0
+	B = len(matrix)-1
+	L = 0
+	R = len(matrix[0])-1
+	while (T<=B and L<=R):
+		if cur_dir == "R":
+			i = L
+			while i <= R:
+				result.append(matrix[T][i])
+				i+=1
+			T+=1
+			cur_dir = "D"
+		elif cur_dir == "D":
+			i = T
+			while i <= B:
+				result.append(matrix[i][R])
+				i+=1
+			R-=1
+			cur_dir = "L"
+		elif cur_dir == "L":
+			i = R
+			while i >= L:
+				result.append(matrix[B][i])
+				i-=1
+			B-=1
+			cur_dir = "U"
+		elif cur_dir == "U":
+			i = B
+			while i >= T:
+				result.append(matrix[i][L])
+				i-=1
+			L+=1
+			cur_dir = "R"
+	return result
 
 
 matrix1 = [
@@ -137,6 +170,13 @@ def test_get_next_tile():
 	assert t1.row == 1
 	assert t1.column == 1
 
+"""
+2 4 6 8
+5 9 12 16
+2 11 5 9
+3 2 1 8
+"""
+
 def test_print_spiral():
 	print_spiral(matrix1)
 	print_spiral([[0]])
@@ -144,8 +184,15 @@ def test_print_spiral():
 	print_spiral([[1,2,3,4],[1,2,3,4]])
 	print_spiral([[1,2],[3,4],[5,6]])
 
+def test_print_spiral_simple():
+	assert print_spiral_simple(matrix1) == [2, 4, 6, 8, 16, 9, 8, 1, 2, 3, 2, 5, 9, 12, 5, 11]
+	print_spiral_simple([[0]])
+	print_spiral_simple([[0,0],[0,0]])
+	print_spiral_simple([[1,2,3,4],[1,2,3,4]])
+	print_spiral_simple([[1,2],[3,4],[5,6]])
 
 if __name__ == "__main__":
 	test_copy_matrix()
 	test_print_spiral()
 	test_get_next_tile()
+	test_print_spiral_simple()
