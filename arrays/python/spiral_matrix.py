@@ -38,25 +38,25 @@ def get_next_direction(cur_dir):
 
 def get_next_tile(tile, cur_dir, visited):
 	if cur_dir == "R":
-		nerowt_tile = Tile(tile.row, tile.column+1)
+		next_tile = Tile(tile.row, tile.column+1)
 	elif cur_dir == "D":
-		nerowt_tile = Tile(tile.row+1, tile.column)
+		next_tile = Tile(tile.row+1, tile.column)
 	elif cur_dir == "L":
-		nerowt_tile = Tile(tile.row, tile.column-1)
+		next_tile = Tile(tile.row, tile.column-1)
 	elif cur_dir == "U":
-		nerowt_tile = Tile(tile.row-1, tile.column)
+		next_tile = Tile(tile.row-1, tile.column)
 
 	#validation here!
-	if nerowt_tile.row >= len(visited) or nerowt_tile.row < 0:
+	if next_tile.row >= len(visited) or next_tile.row < 0:
 		return None
-	if nerowt_tile.column >= len(visited[nerowt_tile.row]) or nerowt_tile.column < 0:
+	if next_tile.column >= len(visited[next_tile.row]) or next_tile.column < 0:
 		return None
 
 	#visited check here!
-	if visited[nerowt_tile.row][nerowt_tile.column] is not None:
+	if visited[next_tile.row][next_tile.column] is not None:
 		return None #we already visited
 
-	return nerowt_tile
+	return next_tile
 
 """
 2 4 6 8
@@ -141,6 +141,8 @@ def test_print_spiral():
 	print_spiral(matrix1)
 	print_spiral([[0]])
 	print_spiral([[0,0],[0,0]])
+	print_spiral([[1,2,3,4],[1,2,3,4]])
+	print_spiral([[1,2],[3,4],[5,6]])
 
 
 if __name__ == "__main__":
