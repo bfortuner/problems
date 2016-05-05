@@ -95,10 +95,29 @@ class Solution:
             prior.next = new_node
             new_node.next = cur_node
 
+    def get_histogram(self, arr):
+        N = 10
+        buckets = [0 for x in range(N)]
+        max_value = max(arr)
+        bucket_size = (max_value+1) / float(N)
+        for num in arr:
+            index_to_place = int(num / bucket_size)
+            buckets[index_to_place] += 1
+        return buckets
+
 
 ## Tests
 
+
 sol = Solution()
+
+print "Running get_histogram --------------"
+print sol.get_histogram([1,1,1,1,1])
+print sol.get_histogram([2,10,5])
+print sol.get_histogram([2,3,1,1,1,1,6,3,1,1,3,3,2,10,5])
+print sol.get_histogram([1,1,1,1,1])
+print sol.get_histogram([1,2,3,4,5])
+print sol.get_histogram([100, 100, 100, 100, 100])
 
 
 print "Running get_buckets -----"

@@ -28,7 +28,7 @@ bucket_size = 2.2
 def sort(arr):
 	max_value = max(arr)
 	num_buckets = len(arr) # create bucket array of size N #4
-	bucket_size = (max_value+1) / float(num_buckets) #account for 0
+	bucket_size = (max_value+1) / float(num_buckets) #+1 to account for 0
 	buckets = [None for x in range(num_buckets)]
 	for num in arr:
 		index = int(num / bucket_size)
