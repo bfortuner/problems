@@ -13,7 +13,21 @@ def binary_to_decimal(binary):
 		exponent += 1
 	return int(decimal)
 
+def decimal_to_binary(decimal):
+	if decimal == 0:
+		return "0"
+	binary = ""
+	while decimal > 0:
+		digit = decimal % 2
+		decimal = decimal / 2
+		binary = str(digit) + binary
+	return binary
+
 print binary_to_decimal(101010)
 print binary_to_decimal(1)
 print binary_to_decimal(0)
 print binary_to_decimal(111)
+
+print decimal_to_binary(10)
+print decimal_to_binary(0)
+print decimal_to_binary(1)
