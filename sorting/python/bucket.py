@@ -71,6 +71,7 @@ def insert_elem_into_buckets(num, index, buckets):
 	return buckets
 
 if __name__ == "__main__":
+	assert sort([1,10,5]) == [1,5,10]
 	assert sort([3,2,5,5]) == [2,3,5,5]
 	assert sort([3,2,5]) == [2,3,5]
 	assert sort([2,1]) == [1,2]
