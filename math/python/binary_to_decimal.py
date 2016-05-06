@@ -23,6 +23,16 @@ def decimal_to_binary(decimal):
 		binary = str(digit) + binary
 	return binary
 
+def decimal_to_hexadecimal(decimal):
+	if decimal == 0:
+		return "0"
+	binary = ""
+	while decimal > 0:
+		digit = decimal % 2
+		decimal = decimal / 2
+		binary = str(digit) + binary
+	return binary
+
 print binary_to_decimal(101010)
 print binary_to_decimal(1)
 print binary_to_decimal(0)
