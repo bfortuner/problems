@@ -16,6 +16,9 @@ class Solution:
         self.recurse(A, 0)
         
     def recurse(self, A, cur_index):
+        """
+        In-place arrange but O(n) space
+        """
         if cur_index >= len(A):
             return
         override = A[A[cur_index]]
