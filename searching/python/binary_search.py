@@ -9,13 +9,13 @@ def binary_search(arr, val):
 	low = 0
 	high = len(arr)-1
 	while low <= high:
-		mid = low + (high-low)/2
+		mid = low + (high-low)/2  #alternatively (high+low)/2
 		if arr[mid] == val:
 			return True
-		elif arr[mid] > val:
-			high = mid-1
-		else:
+		elif arr[mid] < val:
 			low = mid+1
+		else:
+			high = mid-1
 	return False
 
 
