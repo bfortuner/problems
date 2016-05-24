@@ -1,8 +1,8 @@
 """
 Generate all the strings of length n with k character options
-n = 2
-k = 3   #ABC
-k^n = 9
+e.g. How many unique codes can I generate with of length N with K letters?
+examples: Amazon vendor codes. KEHAE or ASINs, B00AEB3FE
+k^n
 input: (2, ["ABC"])
 output = ["AA","AB","AC","BA","BB","BC","CA","CB,"CC"]
 """
