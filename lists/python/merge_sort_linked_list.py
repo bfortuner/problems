@@ -27,10 +27,7 @@ def merge(left, right):
             cur.next = right
             right = right.next
         cur = cur.next
-    while right != None:
-        cur.next = right
-        right = right.next
-        cur = cur.next
+    cur.next = right
     return before_head.next
 
 def get_middle_node(head):
