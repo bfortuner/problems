@@ -19,14 +19,22 @@ left3a = Node(4)
 left2 = Node(2,left3a,left3b)
 root2 = Node(1,left2,right2)
 
-##Skewed Tree
+##Right Skewed Tree
 ra4 = Node(5,None,None)
 ra3 = Node(4,None,ra4)
 ra2 = Node(3,None,ra3)
 ra1 = Node(2,None,ra2)
 root3 = Node(1,None,ra1)
 
+##Left Skewed Tree
+la4 = Node(5)
+la3 = Node(4,la4)
+la2 = Node(3,la3)
+la1 = Node(2,la2)
+root4 = Node(1,la1)
+
 ##Trees
 tree1 = root
 tree2 = root2
 tree3 = root3
+tree4 = root4

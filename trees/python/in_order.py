@@ -1,4 +1,5 @@
 from Node import Node
+import test_data
 
 def in_order_iterative(root):
     stack = []
@@ -17,7 +18,7 @@ def in_order_recursive(root):
     if root == None:
         return None
     in_order_recursive(root.left)
-    print root.data
+    print root.data,
     in_order_recursive(root.right)
     
 def in_order_search(root, target):
@@ -49,10 +50,16 @@ r1 = Node(3,l4,r3)
 root = Node(1,l1,r1)
 
 def test_in_order_iterative():
-    in_order_iterative(root)
-
+    in_order_iterative(test_data.tree1)
+    in_order_iterative(test_data.tree2)
+    in_order_iterative(test_data.tree3)
+    in_order_iterative(test_data.tree4)
+    
 def test_in_order_recursive():
-    in_order_recursive(root)
+    in_order_recursive(test_data.tree1)
+    in_order_recursive(test_data.tree2)
+    in_order_recursive(test_data.tree3)
+    in_order_recursive(test_data.tree4)
 
 def test_in_order_search():
     assert in_order_search(root, 5) == l4
