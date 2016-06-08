@@ -4,14 +4,32 @@ from Stack import build_stack_from_list
 """
 Sort Stack
 
-Write a method to sort a stack in ascending order using Push, Pop, Peek, and IsEmpty.
+Write a method to sort a stack in ascending order
 
-Approach: 3 stacks
-1) Can I come up with a more efficient solution?
-
+Approaches: 
+1) 3 stacks - Small, Large, Current
+2) Recursive - Sort and Insert
 """
 
+def sort_stack_recursive(stack):
+        if len(stack) == 0:
+                return
+        elem = stack.pop()
+        sort_stack_recursive(stack)
+        insert(stack, elem)
 
+def insert(stack, elem):
+        if len(stack) == 0:
+                stack.append(elem)
+        else:
+                top = stack.pop()
+                if top >= elem:
+                        stack.append(top)
+                        stack.append(elem)
+                else:
+                        insert(stack, elem)
+                        stack.append(top)
+                        
 def sort_stack(stack):
 	large = Stack()
 	small = Stack()
@@ -70,8 +88,15 @@ def test_sort_stack_empty():
 	answerstack = build_stack_from_list([])
 	assert answerstack.equals(outputstack) == True
 
+def test_sort_stack_recursive():
+        s1 = [8,3,1,4,2,5,9,7,6]
+        outputstack = [9,8,7,6,5,4,3,2,1]
+        sort_stack_recursive(s1)
+        assert s1 == outputstack
+        
 if __name__ == "__main__":
 	test_sort_stack()
 	test_sort_stack_1_element()
 	test_sort_stack_empty()
 	test_sort_stack_big()
+        test_sort_stack_recursive()
