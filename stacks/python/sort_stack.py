@@ -8,7 +8,7 @@ Write a method to sort a stack in ascending order
 
 Approaches: 
 1) 3 stacks - Small, Large, Current
-2) Recursive - Sort and Insert
+2) Recursive - Sort and Insertion Sort
 """
 
 def sort_stack_recursive(stack):
@@ -19,10 +19,12 @@ def sort_stack_recursive(stack):
         insert(stack, elem)
 
 def insert(stack, elem):
+        """Insertion Sort for Stacks!"""
         if len(stack) == 0:
                 stack.append(elem)
         else:
                 top = stack.pop()
+                #To reverse a stack just remove this conditional
                 if top >= elem:
                         stack.append(top)
                         stack.append(elem)
