@@ -8,7 +8,7 @@ import test_data
 """
 Approaches
 1) Post Order w Hashmap
-   O(n), O(n^height)
+   O(n), O(n + ~height)
 2) Level Order w Two Queues
 """
 

@@ -33,8 +33,20 @@ la2 = Node(3,la3)
 la1 = Node(2,la2)
 root4 = Node(1,la1)
 
+## Tree w Negatives
+l5 = Node(5)
+l3 = Node(9)
+l4 = Node(6)
+r3 = Node(-8,l3)
+l2 = Node(4,)
+l1 = Node(-2,l2,l5)
+r1 = Node(3,l4,r3)
+root5 = Node(1,l1,r1)
+
 ##Trees
 tree1 = root
 tree2 = root2
 tree3 = root3
 tree4 = root4
+negatives = root5
+
