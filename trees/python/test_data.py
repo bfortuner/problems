@@ -43,6 +43,10 @@ l1 = Node(-2,l2,l5)
 r1 = Node(3,l4,r3)
 root5 = Node(1,l1,r1)
 
+## Mirrors
+mirror = Node(1)
+
+
 ##Trees
 tree1 = root
 tree2 = root2
