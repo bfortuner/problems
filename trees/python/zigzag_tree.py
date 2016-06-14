@@ -7,9 +7,8 @@ import test_data
 
 """
 Approaches
-1) Post Order w Hashmap
-   O(n), O(n + ~height)
-2) Level Order w Two Queues
+1) Two queues with loops
+2) Two stacks
 """
 
 def zigzag(root):
@@ -40,7 +39,40 @@ def zigzag(root):
             secondary.append(node.right)
     print
 
+def zigzag_stacks(root):
+    if root == None:
+        return
+    primary = []
+    secondary = []
+    primary.append(root)
+    going_right = True
+    while len(primary) > 0 or len(secondary) > 0:
+        if len(primary) == 0:
+            primary = secondary
+            secondary = []
+            going_right = not going_right
+        node = primary.pop()
+        print node.data,
+        if going_right:
+            if node.left != None:
+                secondary.append(node.left)
+            if node.right != None:
+                secondary.append(node.right)
+        else:
+            if node.right != None:
+                secondary.append(node.right)
+            if node.left != None:
+                secondary.append(node.left)
+    print
+
+print "QUEUES"
 zigzag(test_data.tree1)
 zigzag(test_data.tree2)
 zigzag(test_data.tree3)
 zigzag(test_data.tree4)
+
+print "STACKS"
+zigzag_stacks(test_data.tree1)
+zigzag_stacks(test_data.tree2)
+zigzag_stacks(test_data.tree3)
+zigzag_stacks(test_data.tree4)
