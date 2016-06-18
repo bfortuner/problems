@@ -46,6 +46,15 @@ root5 = Node(1,l1,r1)
 ## Mirrors
 mirror = Node(1)
 
+## BST
+l6 = Node(12)
+l5 = Node(6)
+l4 = Node(9)
+r3 = Node(15,l6)
+l2 = Node(3)
+l1 = Node(4,l2,l5)
+r1 = Node(11,l4,r3)
+bst1 = Node(7,l1,r1)
 
 ##Trees
 tree1 = root
@@ -53,4 +62,4 @@ tree2 = root2
 tree3 = root3
 tree4 = root4
 negatives = root5
-
+bst1 = bst1
