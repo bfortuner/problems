@@ -103,7 +103,43 @@ class MinHeap(Heap):
 
 
 
+"""
+Build Heap From Unsorted Array
+interactivepython.org/runestone/static/pythonds/Trees/BinaryHeapImplementation.html
+Complexity O(n)
+"""
+
+def build_heap(arr, heapType):
+    if heapType == "MAX_HEAP":
+        new_heap = MaxHeap()
+    else:
+        new_heap = MinHeap()
+    new_heap.size = len(arr)
+    new_heap.heap = [0] + arr
+    i = len(arr) // 2
+    while i > 0:
+        new_heap.perc_down(i)
+        i-=1
+    return new_heap
+        
+
+
 ## Tests
+
+mx_hp = build_heap([0, 9, 5, 6, 2, 3],"MAX_HEAP")
+print mx_hp.heap
+assert mx_hp.get_max() == 9
+mx_hp.delete_max()
+assert mx_hp.get_max() == 6
+
+mn_hp = build_heap([0, 9, 5, 6, 2, 3],"MIN_HEAP")
+print mn_hp.heap
+assert mn_hp.get_min() == 0
+mn_hp.delete_min()
+assert mn_hp.get_min() == 2
+
+
+
 
 assert issubclass(MaxHeap, Heap)
 assert isinstance(MaxHeap(), Heap)
