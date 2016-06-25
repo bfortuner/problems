@@ -85,9 +85,16 @@ class AVLTree(object):
         else:
             #Do some conditional checks here.... what are the cases?
             Y = X.right
-            X.balance = -1
+            if Y.balance == -1:
+                root.balance = 1
+                X.balance = 0
+            elif Y.balance == 0:
+                root.balance = 0
+                X.balance = 0
+            else:
+                root.balance = 0
+                X.balance = -1
             Y.balance = 0
-            root.balance = 0
             root.left = right_rotate(X)
             root = left_rotate(root)
         return root
@@ -106,8 +113,16 @@ class AVLTree(object):
         else:
             #Do some conditional checks here....
             Y = X.left
+            if Y.balance == -1:
+                root.balance = 0
+                X.balance = 1
+            elif Y.balance == 0:
+                root.balance = 0
+                X.balance = 0
+            else:
+                root.balance = -1
+                X.balance = 0
             Y.balance = 0
-            root.balance = 0
             root.right = left_rotate(X)
             root = right_rotate(root)
         return root
