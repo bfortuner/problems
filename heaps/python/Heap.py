@@ -49,15 +49,15 @@ class Heap(object):
             return -1
         return self.heap[1]
 
-    def delete_top(self):
+    def delete(self, i):
         """Delete max or min element depending on heap type"""
         if self.size == 0:
             return
-        return_val = self.heap[1]
-        self.heap[1] = self.heap[self.size]
+        return_val = self.heap[i]
+        self.heap[i] = self.heap[self.size]
         self.heap.pop()
-        self.size-=1
-        self.perc_down(1)
+        self.size -= 1
+        self.perc_down(i)
         return return_val
     
     def get_foremost_child(self, i):
@@ -82,7 +82,7 @@ class MaxHeap(Heap):
         return self.get_top()
     
     def delete_max(self):
-        self.delete_top()
+        self.delete(1)
         
     def compare_to(self, a, b):
         return a > b
@@ -96,7 +96,7 @@ class MinHeap(Heap):
         return self.get_top()
 
     def delete_min(self):
-        self.delete_top()
+        self.delete(1)
 
     def compare_to(self, a, b):
         return a < b
@@ -126,86 +126,87 @@ def build_heap(arr, heapType):
 
 ## Tests
 
-mx_hp = build_heap([0, 9, 5, 6, 2, 3],"MAX_HEAP")
-print mx_hp.heap
-assert mx_hp.get_max() == 9
-mx_hp.delete_max()
-assert mx_hp.get_max() == 6
+if __name__ == "__main__":
+    mx_hp = build_heap([0, 9, 5, 6, 2, 3],"MAX_HEAP")
+    print mx_hp.heap
+    assert mx_hp.get_max() == 9
+    mx_hp.delete_max()
+    assert mx_hp.get_max() == 6
 
-mn_hp = build_heap([0, 9, 5, 6, 2, 3],"MIN_HEAP")
-print mn_hp.heap
-assert mn_hp.get_min() == 0
-mn_hp.delete_min()
-assert mn_hp.get_min() == 2
-
-
-
-
-assert issubclass(MaxHeap, Heap)
-assert isinstance(MaxHeap(), Heap)
+    mn_hp = build_heap([0, 9, 5, 6, 2, 3],"MIN_HEAP")
+    print mn_hp.heap
+    assert mn_hp.get_min() == 0
+    mn_hp.delete_min()
+    assert mn_hp.get_min() == 2
 
 
-##MAX HEAP
-max_heap = MaxHeap()
-max_heap.insert(1)
-max_heap.insert(5)
-max_heap.insert(8)
-max_heap.insert(3)
-max_heap.insert(15)
-
-assert max_heap.get_max() == 15
-assert max_heap.size == 5
-max_heap.delete_max()
-
-max_heap.insert(9)
-assert max_heap.get_max() == 9
-assert max_heap.size == 5
-
-max_heap.delete_max()
-assert max_heap.get_max() == 8
-assert max_heap.size == 4
-
-max_heap.delete_max()
-assert max_heap.get_max() == 5
-assert max_heap.size == 3
-
-max_heap.delete_max()
-assert max_heap.get_max() == 3
-assert max_heap.size == 2
-
-max_heap.delete_max()
-assert max_heap.get_max() == 1
-assert max_heap.size == 1
 
 
-##MIN HEAP
-min_heap = MinHeap()
-min_heap.insert(1)
-min_heap.insert(5)
-min_heap.insert(8)
-min_heap.insert(3)
-min_heap.insert(15)
+    assert issubclass(MaxHeap, Heap)
+    assert isinstance(MaxHeap(), Heap)
 
-assert min_heap.get_min() == 1
-assert min_heap.size == 5
-min_heap.delete_min()
 
-min_heap.insert(9)
-assert min_heap.get_min() == 3
-assert min_heap.size == 5
+    ##MAX HEAP
+    max_heap = MaxHeap()
+    max_heap.insert(1)
+    max_heap.insert(5)
+    max_heap.insert(8)
+    max_heap.insert(3)
+    max_heap.insert(15)
 
-min_heap.delete_min()
-assert min_heap.get_min() == 5
-assert min_heap.size == 4
+    assert max_heap.get_max() == 15
+    assert max_heap.size == 5
+    max_heap.delete_max()
 
-min_heap.delete_min()
-assert min_heap.get_min() == 8
-assert min_heap.size == 3
+    max_heap.insert(9)
+    assert max_heap.get_max() == 9
+    assert max_heap.size == 5
 
-min_heap.delete_min()
-assert min_heap.get_min() == 9
-assert min_heap.size == 2
+    max_heap.delete_max()
+    assert max_heap.get_max() == 8
+    assert max_heap.size == 4
 
-min_heap.delete_min()
-assert min_heap.get_min() == 15
-assert min_heap.size == 1
+    max_heap.delete_max()
+    assert max_heap.get_max() == 5
+    assert max_heap.size == 3
+
+    max_heap.delete_max()
+    assert max_heap.get_max() == 3
+    assert max_heap.size == 2
+
+    max_heap.delete_max()
+    assert max_heap.get_max() == 1
+    assert max_heap.size == 1
+
+
+    ##MIN HEAP
+    min_heap = MinHeap()
+    min_heap.insert(1)
+    min_heap.insert(5)
+    min_heap.insert(8)
+    min_heap.insert(3)
+    min_heap.insert(15)
+
+    assert min_heap.get_min() == 1
+    assert min_heap.size == 5
+    min_heap.delete_min()
+
+    min_heap.insert(9)
+    assert min_heap.get_min() == 3
+    assert min_heap.size == 5
+
+    min_heap.delete_min()
+    assert min_heap.get_min() == 5
+    assert min_heap.size == 4
+
+    min_heap.delete_min()
+    assert min_heap.get_min() == 8
+    assert min_heap.size == 3
+
+    min_heap.delete_min()
+    assert min_heap.get_min() == 9
+    assert min_heap.size == 2
+
+    min_heap.delete_min()
+    assert min_heap.get_min() == 15
+    assert min_heap.size == 1
