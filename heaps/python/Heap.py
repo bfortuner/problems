@@ -82,7 +82,7 @@ class MaxHeap(Heap):
         return self.get_top()
     
     def delete_max(self):
-        self.delete(1)
+        return self.delete(1)
         
     def compare_to(self, a, b):
         return a > b
@@ -96,7 +96,7 @@ class MinHeap(Heap):
         return self.get_top()
 
     def delete_min(self):
-        self.delete(1)
+        return self.delete(1)
 
     def compare_to(self, a, b):
         return a < b
