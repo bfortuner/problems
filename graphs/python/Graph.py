@@ -1,58 +1,50 @@
 from Vertex import Vertex
 
 class Graph(object):
-	"""
-	Simple Adjacency List Implementation Where Graph
-	Keeps Master List of All Vertices and Each Vertex 
-	Keeps and List of All its Neighbors
-	"""
-	def __init__(self, vertices=[]):
-		self.vertices=vertices
+    def __init__(self):
+        self.vertices = {}
+        self.num_vertices = 0
 
-	#Add vertex
-	#Remove vertex (loop through and remove all edges)
-	#Could I store edges in HashMap? Or in Vertices?
-	#Bi-directional or uni-directional? Unidirectional is a Tree?
+    def add_vertex(self, key):
+        vertex = Vertex(key)
+        self.vertices[vertex.id] = vertex
+        self.num_vertices+=1
+        return vertex
 
-	def pretty_print(self):
-		for vertex in self.vertices:
-			print str(vertex.value) + " " + str(vertex.neighbors)
+    def get_vertex(self, key):
+        return self.vertices.get(key) #returns None if not found
+    
+    def add_edge(self, fro, to, weight):
+        if fro not in self.vertices:
+            nv = self.add_vertex(fro)
+        if to not in self.vertices:
+            nv = self.add_vertex(to)
+        fv = self.get_vertex(fro)
+        fv.add_neighbor(to, weight)
 
+    def get_keys(self):
+        return self.vertices.keys()
 
+    def __iter__(self):
+        return iter(self.vertices.values())
 
-def build_test_graph():
-	"""
-	A --> B <->
-	^     |    |
-	D <-> C -> E
-	"""
-	v1 = Vertex("A")
-	v2 = Vertex("B")
-	v3 = Vertex("C")
-	v4 = Vertex("D")
-	v5 = Vertex("E")
-
-	v1.add_neighbor(v2)
-	v2.add_neighbors([v3,v5])
-	v3.add_neighbors([v2,v4,v5])
-	v4.add_neighbors([v1,v3])
-	v5.add_neighbors([v2])
-	
-	return Graph([v1,v2,v3,v4,v5])
-
-
-# Tests
-
-def test_basic_ops():
-	vertex = Vertex("A")
-	vertex2 = Vertex("B")
-	vertex3 = Vertex("C")
-
-def test_build_test_graph():
-	test_graph = build_test_graph()
-	test_graph.pretty_print()
+    def __contains__(self, n):
+        return n in self.vertices
 
 
 if __name__ == "__main__":
-	test_basic_ops()
-	test_build_test_graph()
+    g = Graph()
+    g.add_vertex("A")
+    g.add_vertex("B")
+    g.add_vertex("C")
+
+    g.add_edge("A","B",5)
+    g.add_edge("A","C",10)
+    g.add_edge("B","A",2)
+    g.add_edge("A","F",20)
+    g.add_edge("J","K",99)
+
+    print g.vertices
+    assert len(g.get_keys()) == 6
+    assert g.num_vertices == 6
+    assert g.get_vertex("A").id == "A"
