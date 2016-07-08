@@ -1,13 +1,13 @@
 from Vertex import Vertex
 
 class Graph(object):
-    def __init__(self):
-        self.vertices = {}
-        self.num_vertices = 0
+    def __init__(self, vertices={}):
+        self.vertices = vertices
+        self.num_vertices = len(vertices)
 
     def add_vertex(self, key):
         vertex = Vertex(key)
-        self.vertices[vertex.id] = vertex
+        self.vertices[vertex.key] = vertex
         self.num_vertices+=1
         return vertex
 
@@ -31,6 +31,32 @@ class Graph(object):
     def __contains__(self, n):
         return n in self.vertices
 
+    def __str__(self):
+        g = ""
+        for v in self.vertices.values():
+            g += v.key + ": " + str([n.key for n in v.neighbors]) + "\n"
+        return g
+            
+
+def build_test_graph():
+	"""
+	A --> B <->
+	^     |    |
+	D <-> C -> E
+	"""
+	v1 = Vertex("A")
+	v2 = Vertex("B")
+	v3 = Vertex("C")
+	v4 = Vertex("D")
+	v5 = Vertex("E")
+
+	v1.add_neighbor(v2)
+	v2.add_neighbors([v3,v5])
+	v3.add_neighbors([v2,v4,v5])
+	v4.add_neighbors([v1,v3])
+	v5.add_neighbors([v2])
+        
+	return Graph({"A":v1,"B":v2,"C":v3,"D":v4,"E":v5})
 
 if __name__ == "__main__":
     g = Graph()
@@ -47,4 +73,8 @@ if __name__ == "__main__":
     print g.vertices
     assert len(g.get_keys()) == 6
     assert g.num_vertices == 6
-    assert g.get_vertex("A").id == "A"
+    assert g.get_vertex("A").key == "A"
+
+    g2 = build_test_graph()
+    print g2.vertices
+    print g2.num_vertices

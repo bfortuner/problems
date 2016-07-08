@@ -14,27 +14,30 @@ def bfs(vertex, value):
 	neighbors.append(vertex)
 	while len(neighbors) > 0:
 		vertex = neighbors.pop(0)
-		if vertex.value == value:
+		if vertex.key == value:
 			return vertex
 		for neighbor in vertex.neighbors:
 			if neighbor not in visited:
-				neighbors.append(neighbor)
+                                neighbor.predecessor = vertex
+                                neighbor.distance = vertex.distance+1
+                                neighbors.append(neighbor)
 				visited.add(neighbor)
-	return None
+                                
+        return None
 
 
 
 
 def test_bfs():
 	graph = build_test_graph()
-	graph.pretty_print()
+	print graph
 
 	vertices = graph.vertices
-	v1 = vertices[0] #A
-	v2 = vertices[1] #B
-	v3 = vertices[2] #C
-	v4 = vertices[3] #D
-	v5 = vertices[4] #E
+	v1 = vertices["A"]
+	v2 = vertices["B"]
+	v3 = vertices["C"]
+	v4 = vertices["D"]
+	v5 = vertices["E"]
 
 	assert bfs(v1,"B") == v2
 	assert bfs(v1,"C") == v3
