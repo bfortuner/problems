@@ -25,6 +25,9 @@ class Graph(object):
     def get_keys(self):
         return self.vertices.keys()
 
+    def get_vertices(self):
+        return self.vertices.values()
+    
     def __iter__(self):
         return iter(self.vertices.values())
 
