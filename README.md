@@ -16,7 +16,7 @@ Coding Problems
 	* https://leetcode.com/problemset/operating-system/
 	* https://discuss.leetcode.com/tags/5/system%20design
 
-##Resources
+## Resources
 - https://www.hackerrank.com/domains/algorithms/warmup
 - https://coderbyte.com/challenges
 - https://www.hackerrank.com
@@ -32,9 +32,7 @@ Coding Problems
 - http://www.interviewbit.com
 - http://www.hiredintech.com/app/
 
-##Problems
-
-###Sorting
+## Sorting
 
 1. Selection Sort - Implement and describe complexity
 2. [Sort Array012] - Sort an array that contains only the integers 0, 1, and 2 in linear time. (e.g. [1,0,2,2,1] == [0,1,1,2,2])
@@ -47,7 +45,7 @@ Coding Problems
 9. Heap Sort - Implement and describe complexity
 10. Shell Sort - Implement and describe complexity
 
-###Searching
+## Searching
 
 1. Binary Search - Write method to return True if integer is in array
 2. Binary Search w Pivot - An element in a sorted array can be found in O(log n) time via binary search. But suppose I rotate the sorted array at some pivot unknown to you beforehand. So for instance, 1 2 3 4 5 might become 3 4 5 1 2. Devise a way to find an element in the rotated array in O(log n) time. If not found, return -1.
@@ -66,7 +64,7 @@ wordSet = ["hot","dot","dog","lot","log"]
 Example: Length of transformation: 5 (includes starting and ending words)
 "hit" -> "hot" -> "dot" or "lot" -> "dog" or "log" -> "cog"
 
-###Arrays
+## Arrays
 
 1. Sum3EqualsZero - Given array of integers, return true if any 3 elements in array sum to zero
 2. [MaxContigSumArray] - Given array of integers, return max sum of contiguous elements in array. Write iterative and recursive solutions.
@@ -90,9 +88,7 @@ no particular order, and possibly containing duplicates. Nevertheless, when dete
 	- - x -
 13. [Find Max Difference] - The maximum difference for a pair of elements in some array a is defined as the largest difference between any a[i] and a[j] where i < j and a[i] < a[j]. Return -1 if the array is in decending order or no such number exists. ex. a = {2, 3, 10, 2, 4, 8, 1} Output: 8. (10-2 = 8)
 
-
-
-###Strings
+## Strings
 
 1. IsAnagram - Return true if two strings are anagrams (each string contains the exact same alpha-numeric characters and the same count)
 2. RemoveDuplicates - Given String of alpha-numeric characters, return String of distinct characters
@@ -106,7 +102,7 @@ no particular order, and possibly containing duplicates. Nevertheless, when dete
 10. CSV Parser - Write Method that takes a string representing a CSV and returns a useful JSON data structure.
 11. Expand it! - Given a String in format "a2c2b5" where a character is followed by an integer of number of times repeated, expand the string. ex: "a2c2b5" sol = "aaccbbbbb"
 
-###Math
+## Math
 
 1. PowersOfTwo - Compute 2^2^n in linear time
 2. Swap Integers - Swap two integers in an array without using temporary variables
@@ -116,13 +112,13 @@ no particular order, and possibly containing duplicates. Nevertheless, when dete
 6. [P99 Website Latency] - Given an unsorted array of floats between 0 and 1, representing website latency times, return the 99th percentile time (the time that is greater than 99% of other times). This is an important metric in software development to identify worst case issues for users. Follow-up: Instead of an array, assume you are receiving an infinite stream of latency times and can't store them all. Create a Class to return the P99 at any given moment (methods void putTime(double time), double getP99()). Follow-up: Update your methods to handle variable percentiles (60th, 85th) and latency ranges (3 - 7 seconds).
 7. Multiply -  Implement multiplication of two numbers without using * operator
 
-###Hash Tables
+## Hash Tables
 
 1. Open Addressing - Write a HashTable class that uses "linear probing" to resolve collisions (methods Get, Put, Remove)
 2. [Chaining] - Write a HashTable class that uses LinkedLists to resolve collisions (methods Get, Put, Remove)
 3. Dynamic Resizing - Add dynamic resizing to either above implementations
 
-###Linked Lists
+## Linked Lists
 
 1. Double Linked List - Implement a Doubly Linked List
 2. Remove Duplicates - Remove duplicates from both sorted and unsorted Singly Linked List
@@ -141,7 +137,7 @@ no particular order, and possibly containing duplicates. Nevertheless, when dete
 15. Merge Lists - Given 2 sorted lists, merge them into one list.
 
 
-###Recursion
+## Recursion
 
 1. Fibonacci - Write method to generate the nth fibonacci number
 2. Robot Squares - Imagine a robot sitting on the upper left hand corner of an NxN grid. The robot can only move in 2 directions: right and down. How many possible paths are there for the robot?
@@ -152,7 +148,7 @@ no particular order, and possibly containing duplicates. Nevertheless, when dete
 7. Cents Combos - Given an infinite number of coins (25 cents, 10, 5, 1), return the number of possible ways of representing N cents.
 8. Paint Fill - Implement the "paint fill" function one might see on an image editing program. Given a 2 dimensional matrix array of Colors, fill in the surrounding area until you hit a border or another filled-in square.
 
-###Trees
+## Trees
 
 1. Count Nodes at k distance - Given a binary tree, print the nodes k distance away from a target node
 2. Implement Tree - That stores integers and has methods getParent(), setParent(), getChildren(), addChild(), removeChild(), getValue(), setValue()
@@ -184,7 +180,7 @@ b) If the given key is present in the BST, path array tells you the path (in ter
 26. Common Ancestor - Given two nodes in a binary tree, implement a function that returns the closet common ancestor of both nodes in the tree.
 
 
-###Stacks
+## Stacks
 
 1. Implement Stack - Push, Pop, Peek, IsEmpty methods
 2. Stacks with Array - Implement 3 stacks using a single array.
@@ -194,19 +190,19 @@ b) If the given key is present in the BST, path array tells you the path (in ter
 6. Evaluate Expression - Evaluate a space-delimited postfix expression String. e.g. "( 1 + ( ( 2 + 3 ) * ( 4 * 5 ) ) )" == 101
 7. Stack With Max - Create a data structure that efficiently supports the stack operations (push and pop) and also a return-the-maximum operation. Assume the elements are reals numbers so that you can compare them.
 
-###Queues
+## Queues
 
 1. Implement Queue w Linked List - Enqueue, Dequeue, Size methods.
 2. Implement Queue w Resizing Array - Enqueue, Dequeue, Size methods.
 3. Queue With Stacks - Implement a queue using 2 Stacks
 4. Queue With Circular Linked List - Implement a queue using a circular linked list (no links are null and the value of last.next = first). Keep only one Node instance variable (last).
 
-###Heaps
+## Heaps
 
 1. Binary Heap - Implement a Binary Heap of integers with methods - isEmpty(), getSize(), getMin(), deleteMin(), buildBinaryTreeFromList(), insertElement()
 2. Binary Heap in CPP - ""
 
-###Graphs
+## Graphs
 
 1. Implement a Directed Graph using the Adjacent List technique
 2. BFS - Find the Vertex in a Graph that holds the key "E" using Breadth First Search.
@@ -217,15 +213,13 @@ b) If the given key is present in the BST, path array tells you the path (in ter
 7. Implement a Graph and Vertex
 8. Pretty Print - Starting with a single Vertex, implement a method that prints out a string representation of a Graph that resembles a visual web
 
-###Sets
+## Sets
 
 1. [Implement Set] - Implement hash function, add, contains methods and constructor methods.
 
-###Design
+## Design
 
 1. [Parking Lot] - Model an OOP design for an attendant-less parking lot. To start, walk through the entire customer experience, keeping track of each time software is required.
-
-
 
 
 *[Brackets] highlight questions that we were asked in an interview
