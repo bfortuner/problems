@@ -1,9 +1,24 @@
-boring-stuff
-==================
+Coding Problems
+===============
 
-Boring Problems and Solutions :)
+## Approach
+1. Go through all problems in [brackets]
+2. Go through top problems on geeksforgeeks and leetcode
+	* https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/
+	* https://www.geeksforgeeks.org/top-25-interview-questions/
+	* https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/
+	* https://leetcode.com/problemset/top-interview-questions/
+3. For each problem, write the solution out on paper
+4. For tricky problems, implement solution in code and test
+5. Review common data structures and algorithms
+6. Do more problems :)
+7. Operating Systems, Networking, Databases, System design
+	* https://leetcode.com/problemset/operating-system/
+	* https://discuss.leetcode.com/tags/5/system%20design
 
 ##Resources
+- https://www.hackerrank.com/domains/algorithms/warmup
+- https://coderbyte.com/challenges
 - https://www.hackerrank.com
 - https://leetcode.com/
 - http://beust.com/algorithms.pdf
@@ -22,7 +37,7 @@ Boring Problems and Solutions :)
 ###Sorting
 
 1. Selection Sort - Implement and describe complexity
-2. [Sort Array012] - Sort an array that contains only the integers 0, 1, and 2 in linear time. (e.g. [1,0,2,2,1] == [0,1,1,2,2]) 
+2. [Sort Array012] - Sort an array that contains only the integers 0, 1, and 2 in linear time. (e.g. [1,0,2,2,1] == [0,1,1,2,2])
 3. Insertion Sort - Implement and describe complexity
 4. Bubble Sort - Implement and describe complexity
 5. Counting Sort - Implement and describe complexity
@@ -42,12 +57,12 @@ Boring Problems and Solutions :)
 [1,1,1,0] = 4 paths
 [0,1,1,0]
 [0,1,1,1]
-5. [Word Ladder] - Given a starting word, ending word and wordset. Find length of shortest transformation path from begin Word to end Word. 
-Note: All words lowercase and alphabetical chars only. All words have same length. 
+5. [Word Ladder] - Given a starting word, ending word and wordset. Find length of shortest transformation path from begin Word to end Word.
+Note: All words lowercase and alphabetical chars only. All words have same length.
 Rules: 1. change only 1 char at a time. 2. intermediate word must be in wordset.
-ex. 
+ex.
 beginWord = "hit", endWord = "cog"
-wordSet = ["hot","dot","dog","lot","log"] 
+wordSet = ["hot","dot","dog","lot","log"]
 Example: Length of transformation: 5 (includes starting and ending words)
 "hit" -> "hot" -> "dot" or "lot" -> "dog" or "log" -> "cog"
 
@@ -64,9 +79,9 @@ Example: Length of transformation: 5 (includes starting and ending words)
 9. [Intersection Two Arrays] - Given two unsorted integer arrays, return a 3rd array with the intersection (distinct elements that appear in both arrays). Optimize for time and space complexity.
 10. Find Peak - Implement a function taht returns a local max in an array in O(log(n))
 Example: [1,5,2,3,4] Sol = 5 or 4. An element is a peak because it's neighbors are less than it.
-11. [Sets all Equal] - WAF that takes an array of "sets" of String objects, and determines if they are equal. Each "set" in the input array is represented as an array of String objects, in 
+11. [Sets all Equal] - WAF that takes an array of "sets" of String objects, and determines if they are equal. Each "set" in the input array is represented as an array of String objects, in
 no particular order, and possibly containing duplicates. Nevertheless, when determining whether two of these "sets" are equivalent, you should disregard order and duplicates. For example, the sets represented by these arrays are all equivalent: {"a", "b"}{"b", "a"}{"a", "b", "a"}
-12. [Find Celebrity] - Party of n people. Only one person is known to everyone at the party. This "Celebrity" may or may not be in attendence. Celebrity knows no one at the party. Given an array of unique numbers and a function HaveAquaintance(A,B) which returns true if A knows B. Find the celebrity in a minimum number of questions. 
+12. [Find Celebrity] - Party of n people. Only one person is known to everyone at the party. This "Celebrity" may or may not be in attendence. Celebrity knows no one at the party. Given an array of unique numbers and a function HaveAquaintance(A,B) which returns true if A knows B. Find the celebrity in a minimum number of questions.
 13. [Distinct Elements 2 Arrays] - Given 2 arrays, return array of numbers that exist in array 1 but not in array 2. Provide a solution in linear (2n is possible) time.
 14. [Largest Connected Group] - Given 2D array of X/-, find the size of the largest connected group of X's
 	x x - -
@@ -85,7 +100,7 @@ no particular order, and possibly containing duplicates. Nevertheless, when dete
 4. ReplaceSpaces - Given String, replace all spaces with HTML '%20'
 5. IsRotation - Return true if str2 is rotation of str1
 6. ReverseStringInplace - Reverses a string inplace
-7. [FindFirstUniqueChar] - Return the first non-repeated character in a string. If not found, return null. Assume the string is NOT sorted. 
+7. [FindFirstUniqueChar] - Return the first non-repeated character in a string. If not found, return null. Assume the string is NOT sorted.
 8. ReverseWords - Given a sentence, return the sentence in reverse order. (e.g. "I am a student" == "student a am I")
 9. Longest Substring No Dupes - Given a string, please get the length of the longest substring which does not have duplicated characters. Supposing all characters in the string are in the range from ‘a’ to ‘z’. Input: "ababc", Output: 3.
 10. CSV Parser - Write Method that takes a string representing a CSV and returns a useful JSON data structure.
@@ -97,8 +112,8 @@ no particular order, and possibly containing duplicates. Nevertheless, when dete
 2. Swap Integers - Swap two integers in an array without using temporary variables
 3. [Sum Two Arrays] - Write method to sum 2 arrays and return a new array. Arrays can be of different lengths. e.g. [1,3] + [1,0,0] == [1,1,3]
 4. Smallest Number > k - Write method to find the smallest number which is greater than a given number k and has SAME SET OF DIGITS as given number
-5. [Find Missing Integer] - Given an array of sorted consecutive integers, return the missing integer (or -1 if no integer is missing). E.g. [3,4,6,7] == 4. Complete solutions in both O(n) and O(log n) time. Follow-up: write a method that handles an unsorted array of integers between 0 and N in O(N) time. e.g. [3,5,7,4] == 6 
-6. [P99 Website Latency] - Given an unsorted array of floats between 0 and 1, representing website latency times, return the 99th percentile time (the time that is greater than 99% of other times). This is an important metric in software development to identify worst case issues for users. Follow-up: Instead of an array, assume you are receiving an infinite stream of latency times and can't store them all. Create a Class to return the P99 at any given moment (methods void putTime(double time), double getP99()). Follow-up: Update your methods to handle variable percentiles (60th, 85th) and latency ranges (3 - 7 seconds). 
+5. [Find Missing Integer] - Given an array of sorted consecutive integers, return the missing integer (or -1 if no integer is missing). E.g. [3,4,6,7] == 4. Complete solutions in both O(n) and O(log n) time. Follow-up: write a method that handles an unsorted array of integers between 0 and N in O(N) time. e.g. [3,5,7,4] == 6
+6. [P99 Website Latency] - Given an unsorted array of floats between 0 and 1, representing website latency times, return the 99th percentile time (the time that is greater than 99% of other times). This is an important metric in software development to identify worst case issues for users. Follow-up: Instead of an array, assume you are receiving an infinite stream of latency times and can't store them all. Create a Class to return the P99 at any given moment (methods void putTime(double time), double getP99()). Follow-up: Update your methods to handle variable percentiles (60th, 85th) and latency ranges (3 - 7 seconds).
 7. Multiply -  Implement multiplication of two numbers without using * operator
 
 ###Hash Tables
@@ -157,14 +172,14 @@ no particular order, and possibly containing duplicates. Nevertheless, when dete
 a) If the given key is not present in the tree than the Path Array is equal to “-1”
 b) If the given key is present in the BST, path array tells you the path (in terms of left & right direction) that you take from root to reach the given key. If you go towards right add “0” to the path array and if you go towards left add “1” to Path Array.
 16. [Expression Tree] - Implement a method that builds a binary tree given a postfix expression like 73+2*. Write a second method to return the postfix expression String given a binary tree. Write a third method that returns the Infix expression String. Terms in the input expression are separated by spaces.
-17. [Mirror Tree] - Write a method that takes a Binary Tree and returns a mirror image of that tree (i.e. all the left sides are on the right and vis versa). 
-18. [Max Weight Subtree] - Given a BinaryTree, write a method that returns the substree of maximum weight. Each node in the subtree carries an integer (+/-) value which represents that node's weight.
+17. [Mirror Tree] - Write a method that takes a Binary Tree and returns a mirror image of that tree (i.e. all the left sides are on the right and vis versa).
+18. [Max Weight Subtree] - Given a BinaryTree, write a method that returns the subtree of maximum weight. Each node in the subtree carries an integer (+/-) value which represents that node's weight.
 19. Zig_Zag_Tree - Given a binary tree, return the zigzag level order traversal of its nodes' values. (ie, from left to right, then right to left for the next level and alternate between).
 20. Binary Search Tree to LL- Convert a binary search tree to a linked list.
 21. Iterative InOrder Traversal - Implement in-order traversal of tree iteratively.
 22. Max Path Sum - find the max sum of a path in a binary search tree.
-23. Find Predecessor/Find Successor - implment functions to find predecessor and successor in BST
-24. Invert Tree- WAF to invert a tree. 
+23. Find Predecessor/Find Successor - implement functions to find predecessor and successor in BST
+24. Invert Tree- WAF to invert a tree.
 25. Delete Node - WAF to delete node from a tree.
 26. Common Ancestor - Given two nodes in a binary tree, implement a function that returns the closet common ancestor of both nodes in the tree.
 
@@ -174,7 +189,7 @@ b) If the given key is present in the BST, path array tells you the path (in ter
 1. Implement Stack - Push, Pop, Peek, IsEmpty methods
 2. Stacks with Array - Implement 3 stacks using a single array.
 3. Set of Stacks - Consider a Stack of plates. If one stack gets too high, create a new stack of plates. Implement a special stack that holds these multiple stacks. When the first stack passes some threshold, the class creates a new stack and continues. Implement both Push and Pop methods.
-4. Towers of Hanoi - 
+4. Towers of Hanoi -
 5. Sort Stack - Write a method to sort a stack in ascending order using Push, Pop, Peek, and IsEmpty.
 6. Evaluate Expression - Evaluate a space-delimited postfix expression String. e.g. "( 1 + ( ( 2 + 3 ) * ( 4 * 5 ) ) )" == 101
 7. Stack With Max - Create a data structure that efficiently supports the stack operations (push and pop) and also a return-the-maximum operation. Assume the elements are reals numbers so that you can compare them.
@@ -198,9 +213,9 @@ b) If the given key is present in the BST, path array tells you the path (in ter
 3. DFS - Implement Recursive and Iterative versions of Depth-First Search, which visit and print out every Vertex in Graph
 4. Topological Sort - Implement Recursive (DFS) and Iterative versions of Topological Sort
 5. [Chess Moves] - Write a class that calculates the minimum number of moves required to move from point A to point B on a 10x10 chess board. Implement methods to handle moves for Rook, Queen, King, and Knight.
-6. [Amazon Locker] - Write a method to find the nearest Amazon locker, given a starting Vertex, which has methods getNeighbors() and isLocker(). The graph can be infinitely big, and you don't know the location of the amazon lockers. 
+6. [Amazon Locker] - Write a method to find the nearest Amazon locker, given a starting Vertex, which has methods getNeighbors() and isLocker(). The graph can be infinitely big, and you don't know the location of the amazon lockers.
 7. Implement a Graph and Vertex
-8. Pretty Print - Starting with a single Vertex, implement a method that prints out a string representation of a Graph that resembles a visual web 
+8. Pretty Print - Starting with a single Vertex, implement a method that prints out a string representation of a Graph that resembles a visual web
 
 ###Sets
 
@@ -213,4 +228,4 @@ b) If the given key is present in the BST, path array tells you the path (in ter
 
 
 
-*[Brackets] highlight questions that we were asked in an interview 
+*[Brackets] highlight questions that we were asked in an interview
